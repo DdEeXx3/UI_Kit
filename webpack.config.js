@@ -1,7 +1,7 @@
 module.exports = {
     entry: ["./site/app.js"],//path relative to this file
     output: {
-        filename: "./app.bundle.js"//path relative to this file
+        filename: "./dist/app.bundle.js"//path relative to this file
     },
     devServer: {
         hot: true
@@ -15,6 +15,17 @@ module.exports = {
                 "css-loader", // translates CSS into CommonJS
                 "sass-loader" // compiles Sass to CSS, using Node Sass by default
             ]
-        }]
+        }, {
+            test: /\.(png|jpg|gif)$/,
+            use: [
+              {
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name].[ext]',
+                },
+              },
+            ],
+          },
+        ]
     }
 };
