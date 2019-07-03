@@ -1,0 +1,58 @@
+/*Defining base font size and values of base and resolution ratio. 
+Defining function for changing size of font (in pixels):
+
+                 | RESOLUTION RATIO LEVEL
+--------------------------------------------
+BASE RATIO LEVEL |    0   |    1    |   2
+--------------------------------------------
+        0        |   80   |    60   |   45
+        1        |   54   |    40   |   30 
+        2        |   36   |    27   |   20
+        3        |   24   |    20   |   16 
+        4        |   16   |    16   |   16
+        5        |   11   |    11   |   11
+*/
+
+$base_font: 80px;
+$base_ratio: 0.67;
+$resolution_ratio: 0.75;
+
+@function font_size($base_ratio_level, $resolution_ratio_level){
+    $font_size: $base_font;
+
+    @if $base_ratio_level == 4 or $base_ratio_level == 5{
+        $resolution_ratio_level: 0;
+    }
+
+    @if $base_ratio_level > 0{
+        @for $i from 1 through $base_ratio_level{
+            $font_size: $font_size * $base_ratio;
+        }
+    }
+
+    @if $resolution_ratio_level > 0{
+        @for $i from 1 through $resolution_ratio_level{
+            $font_size: $font_size * $resolution_ratio;
+        }
+    }
+
+    @if $base_ratio_level == 3 and ($resolution_ratio_level == 1 or $resolution_ratio_level == 2){
+        $font_size: $font_size + 2;
+    }
+
+    $font_size: round($font_size);
+
+    @return $font_size;
+}
+
+/*Defining default width and height of object*/
+
+$width: 100%;
+$height: auto;
+@mixin width_height 
+{
+    width: $width;
+    height: $height;
+    margin-right: auto;
+    margin-left: auto;
+}

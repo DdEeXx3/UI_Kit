@@ -1,0 +1,150 @@
+@import 'variables';
+@import 'typography';
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+$medium_resolution: 1068px;
+$small_resolution: 735px;
+
+@mixin medium {
+    @media (max-width: $medium_resolution) {
+        @content;
+    }
+}
+
+@mixin small {
+    @media (max-width: $small_resolution) {
+        @content;
+    }
+    
+}
+
+body
+{
+    background-color: rgb(223, 230, 236);
+    width: 100%;
+}
+
+.lists
+{
+    padding: 5%;
+    display: grid;
+    grid-template-areas:
+    "the_biggest big"
+    "medium medium_small"
+    "small the_smallest";
+    @include small()
+    {
+        grid-template-areas:
+        "the_biggest"
+        "big"
+        "medium"
+        "medium_small"
+        "small"
+        "the_smallest";
+    }
+}
+
+.line
+{
+    @include width_height;
+    border-bottom: 5px black solid;
+}
+
+.headers, .paragraphs, .links
+{
+    text-align: center;
+    padding: 5%;
+}
+
+h1, .the_biggest
+{
+    @include width_height;
+    grid-area: the_biggest;
+    font-size: font_size(0, 0);
+    @include medium()
+    {
+        font-size: font_size(0, 1);
+    }
+    @include small()
+    {
+        font-size: font_size(0, 2);
+    }
+}
+
+h2, .big
+{
+    @include width_height;
+    grid-area: big;
+    font-size: font_size(1, 0);
+    @include medium()
+    {
+        font-size: font_size(1, 1);
+    }
+    @include small()
+    {
+        font-size: font_size(1, 2);
+    }
+}
+
+h3, .medium
+{
+    @include width_height;
+    grid-area: medium;
+    font-size: font_size(2, 0);
+    @include medium()
+    {
+        font-size: font_size(2, 1);
+    }
+    @include small()
+    {
+        font-size: font_size(2, 2);
+    }
+}
+
+h4, .medium_small
+{
+    @include width_height;
+    grid-area: medium_small;
+    font-size: font_size(3, 0);
+    @include medium()
+    {
+        font-size: font_size(3, 1);
+    }
+    @include small()
+    {
+        font-size: font_size(3, 2);
+    }
+}
+
+h5, .small
+{
+    @include width_height;
+    grid-area: small;
+    font-size: font_size(4, 0);
+    @include medium()
+    {
+        font-size: font_size(4, 1);
+    }
+    @include small()
+    {
+        font-size: font_size(4, 2);
+    }
+}
+
+h6, .the_smallest
+{
+    @include width_height;
+    grid-area: the_smallest;
+    font-size: font_size(5, 0);
+    @include medium()
+    {
+        font-size: font_size(5, 1);
+    }
+    @include small()
+    {
+        font-size: font_size(5, 2);
+    }
+}
