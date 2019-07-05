@@ -1,0 +1,226 @@
+/*Defining base font size and values of base and resolution ratio with 2 breakpoints (mobile and tablet).
+Defining function for changing size of font (in pixels):
+
+                 | RESOLUTION RATIO LEVEL
+--------------------------------------------
+BASE RATIO LEVEL |    0   |    1    |   2
+--------------------------------------------
+        0        |   80   |    60   |   45
+        1        |   54   |    40   |   30
+        2        |   36   |    27   |   20
+        3        |   24   |    20   |   16
+        4        |   16   |    16   |   16
+        5        |   11   |    11   |   11
+*/
+
+
+@function font_size($baseRatioLevel, $resolutionRatioLevel){
+    $fontSize: $baseFont;
+
+    @if $baseRatioLevel == 4 or $baseRatioLevel == 5{
+        $resolutionRatioLevel: 0;
+    }
+
+    @if $baseRatioLevel > 0{
+        @for $i from 1 through $baseRatioLevel{
+            $fontSize: $fontSize * $baseRatio;
+        }
+    }
+
+    @if $resolutionRatioLevel > 0{
+        @for $i from 1 through $resolutionRatioLevel{
+            $fontSize: $fontSize * $resolutionRatio;
+        }
+    }
+
+    @if $baseRatioLevel == 3 and ($resolutionRatioLevel == 1 or $resolutionRatioLevel == 2){
+        $fontSize: $fontSize + 2;
+    }
+
+    $fontSize: round($fontSize);
+
+    @return $fontSize;
+}
+
+//Mixin changing font-sizes for different resolution of the screen:
+//
+@mixin medium_resolution {
+    @media (max-width: $md * 1px) {
+        @content;
+    }
+}
+
+@mixin small_resolution {
+    @media (max-width: $sm * 1px) {
+        @content;
+    }
+
+}
+
+@mixin desktop_resolution {
+    @media (min-width: $lg * 1px){
+        @content;
+    }
+}
+
+@mixin font_sizes($baseLevel){
+    font-size: font_size($baseLevel, 0);
+    @include medium_resolution()
+    {
+        font-size: font_size($baseLevel, 1);
+    }
+    @include small_resolution()
+    {
+        font-size: font_size($baseLevel, 2);
+    }
+
+}
+
+@mixin font_sizes2($maxFont, $minFont) {
+    font-size: calc(#{$minFont}px + (#{$maxFont} - #{$minFont}) * ((100vw - #{$sm}px) / (#{$lg} - #{$sm})));
+
+    @include small_resolution() {
+        font-size: #{$minFont}px;
+    }
+    @include desktop_resolution() {
+        font-size: #{$maxFont}px;
+    }
+}
+
+//Defining height between lines of text:
+
+@function line_height($property){
+
+    $height: 0;
+
+    @if $property == "small"{
+        $height: $lineSmall;
+    }
+    @else if $property == "medium"{
+        $height: $lineMedium;
+    }
+    @else if $property == "normal"{
+        $height: $lineNormal;
+    }
+    @else if $property == "recommended"{
+        $height: $lineRecommended;
+    }
+    @else{
+        $height: $lineBig;
+    }
+
+    @return $height;
+}
+
+//Defining spacing between letters:
+
+@function letter_spacing($property){
+
+    $spacing: 0;
+    @if $property == "small"{
+        $spacing: $letterSmall;
+    }
+    @else if $property == "medium"{
+        $spacing: $letterMedium;
+    }
+    @else if $property == "normal"{
+        $spacing: $letterNormal;
+    }
+    @else if $property == "recommended"{
+        $spacing: $letterRecommended;
+    }
+    @else{
+        $spacing: $letterBig;
+    }
+
+    @return $spacing;
+}
+////Styling the page////
+
+body
+{
+    background-color: #dfe6ec42;
+    width: 100%;
+    line-height: line_height(normal);
+    letter-spacing: letter_spacing(normal);
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+}
+
+.content
+{
+    padding: $contentPadding;
+}
+
+%header-spacing {
+    line-height: line_height(normal);
+    margin-bottom: $headerMarginBottom;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.italic
+{
+    font-style: italic;
+}
+
+.underline
+{
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @extend %header-spacing;
+}
+
+p {
+    margin-bottom: $paragraphMarginBottom;
+}
+
+hr {
+    border-bottom: 5px #fff solid;
+}
+
+
+h1, .the_biggest
+{
+    @include font_sizes2(map-get($xxl, "lg"), map-get($xxl, "sm"));
+}
+
+h2, .big
+{
+    @include font_sizes2(map-get($xl, "lg"), map-get($xl, "sm"));
+}
+
+h3, .medium
+{
+    @include font_sizes2(map-get($l, "lg"), map-get($l, "sm"));
+}
+
+h4, .medium_small
+{
+    @include font_sizes2(map-get($m, "lg"), map-get($m, "sm"));
+}
+
+h5, .small
+{
+    @include font_sizes2(map-get($s, "lg"), map-get($s, "sm"));
+}
+
+h6, .the_smallest
+{
+    @include font_sizes2(map-get($xs, "lg"), map-get($xs, "sm"));
+}
+
+ol li {
+    padding-bottom: 0.3em;
+    margin-left: 1.6em;
+    @extend .small
+}
+
+ul li {
+    margin-bottom: 0.2em;
+    list-style-type: square;
+}
