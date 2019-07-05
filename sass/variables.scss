@@ -1,28 +1,32 @@
 //Breakpoint resolutions of screen
-$medium_resolution: 1068;
-$small_resolution: 735;
+$lg: 1600;
+$md: 1068;
+$sm: 735;
 
 //Base font size and size changing ratio:
 
-$base_font: 80px;
+$baseFont: 80px;
 $base_ratio: 0.67;
 $resolution_ratio: 0.75;
 
+//0        |   80   |    60   |   45
+//1        |   54   |    40   |   30
+//2        |   36   |    27   |   20
+//3        |   24   |    20   |   16
+//4        |   16   |    16   |   16
+//5        |   11   |    11   |   11
+
 //Base font sizes - alternate way:
-$the_biggest_font_max: 80;
-$big_font_max: 54;
-$medium_font_max: 36;
-$medium_small_font_max: 24;
-$small_font: 16;
-$the_smallest_font: 11;
+$xxl: ("lg": 80, "md": 60, "sm": 45);
+$xl:  ("lg": 54, "md": 40, "sm": 30);
+$l:  ("lg": 54, "md": 40, "sm": 30);
+$m:  ("lg": 54, "md": 40, "sm": 30);
+$s:  ("lg": 54, "md": 40, "sm": 30);
+$xs:  ("lg": 54, "md": 40, "sm": 30);
 
-$the_biggest_font_min: round($the_biggest_font_max * $resolution_ratio * $resolution_ratio);
-$big_font_min: round($big_font_max * $resolution_ratio * $resolution_ratio);
-$medium_font_min: round($medium_font_max * $resolution_ratio * $resolution_ratio);
-$medium_small_font_min: round($medium_small_font_max * $resolution_ratio * $resolution_ratio + 2);
-//Height between lines:
+$baseFontSizes: 80, 60 , 45;
 
-$line_small: 0.8; 
+$line_small: 0.8;
 $line_medium: 1.1;
 $line_normal: 1.3;
 $line_recommended: 1.6;
@@ -40,5 +44,5 @@ $letter_big: 0.2em;
 $header_padding_down: 15px;
 $header_padding_left: 15px;
 $header_margin_bottom: 15px;
-$paragraph_margin_bottom: 15px;
-$content_padding: 40px;
+$paragraph_margin_bottom: 1em;
+$content_padding: 20px;
