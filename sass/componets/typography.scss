@@ -1,0 +1,178 @@
+//Defining height between lines of text:
+
+@function line_height($property)
+{
+
+    $height: 0;
+
+    @if $property == "small"{
+        $height: $lineSmall;
+    }
+    @else if $property == "medium"{
+        $height: $lineMedium;
+    }
+    @else if $property == "normal"{
+        $height: $lineNormal;
+    }
+    @else if $property == "recommended"{
+        $height: $lineRecommended;
+    }
+    @else{
+        $height: $lineBig;
+    }
+
+    @return $height;
+}
+
+//Defining spacing between letters:
+
+@function letter_spacing($property)
+{
+
+    $spacing: 0;
+    @if $property == "small"{
+        $spacing: $letterSmall;
+    }
+    @else if $property == "medium"{
+        $spacing: $letterMedium;
+    }
+    @else if $property == "normal"{
+        $spacing: $letterNormal;
+    }
+    @else if $property == "recommended"{
+        $spacing: $letterRecommended;
+    }
+    @else{
+        $spacing: $letterBig;
+    }
+
+    @return $spacing;
+}
+////Styling the page////
+
+body
+{
+    background-color: #dfe6ec42;
+    width: 100%;
+    line-height: line_height(normal);
+    letter-spacing: letter_spacing(normal);
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+}
+
+.content
+{
+    padding: $contentPadding;
+}
+
+%header-spacing {
+    line-height: line_height(normal);
+    margin-bottom: $headerMarginBottom;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.italic
+{
+    font-style: italic;
+}
+
+.underline
+{
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 
+{
+    @extend %header-spacing;
+}
+
+p 
+{
+    margin-bottom: $paragraphMarginBottom;
+}
+
+hr
+{
+    border-bottom: 5px #fff solid;
+}
+
+a
+{
+    color: #0070c9;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    cursor: pointer;
+    transition: all 0.4s linear;
+   -webkit-transition: all 0.4s linear;
+   -moz-transition: all 0.4s linear;
+
+    &:hover
+    {
+        color: #005faa;
+        text-decoration: underline;
+        opacity: 0.85;
+    }
+}
+
+.text_right
+{
+    text-align: right;
+}
+
+.text_left
+{
+    text-align: left;
+}
+
+.text_center
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h1, .the_biggest
+{
+    @include font_sizes2(map-get($xxl, "lg"), map-get($xxl, "sm"));
+}
+
+h2, .big
+{
+    @include font_sizes2(map-get($xl, "lg"), map-get($xl, "sm"));
+}
+
+h3, .medium
+{
+    @include font_sizes2(map-get($l, "lg"), map-get($l, "sm"));
+}
+
+h4, .medium_small
+{
+    @include font_sizes2(map-get($m, "lg"), map-get($m, "sm"));
+}
+
+h5, .small
+{
+    @include font_sizes2(map-get($s, "lg"), map-get($s, "sm"));
+}
+
+h6, .the_smallest
+{
+    @include font_sizes2(map-get($xs, "lg"), map-get($xs, "sm"));
+}
+
+ol li 
+{
+    padding-bottom: 0.3em;
+    margin-left: 1.6em;
+    @extend .small
+}
+
+ul li 
+{
+    margin-bottom: 0.2em;
+    list-style-type: square;
+}
