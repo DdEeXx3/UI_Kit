@@ -14,76 +14,76 @@ BASE RATIO LEVEL |    0   |    1    |   2
 */
 
 
-@function font_size($base_ratio_level, $resolution_ratio_level){
-    $font_size: $base_font;
+@function font_size($baseRatioLevel, $resolutionRatioLevel){
+    $fontSize: $baseFont;
 
-    @if $base_ratio_level == 4 or $base_ratio_level == 5{
-        $resolution_ratio_level: 0;
+    @if $baseRatioLevel == 4 or $baseRatioLevel == 5{
+        $resolutionRatioLevel: 0;
     }
 
-    @if $base_ratio_level > 0{
-        @for $i from 1 through $base_ratio_level{
-            $font_size: $font_size * $base_ratio;
+    @if $baseRatioLevel > 0{
+        @for $i from 1 through $baseRatioLevel{
+            $fontSize: $fontSize * $baseRatio;
         }
     }
 
-    @if $resolution_ratio_level > 0{
-        @for $i from 1 through $resolution_ratio_level{
-            $font_size: $font_size * $resolution_ratio;
+    @if $resolutionRatioLevel > 0{
+        @for $i from 1 through $resolutionRatioLevel{
+            $fontSize: $fontSize * $resolutionRatio;
         }
     }
 
-    @if $base_ratio_level == 3 and ($resolution_ratio_level == 1 or $resolution_ratio_level == 2){
-        $font_size: $font_size + 2;
+    @if $baseRatioLevel == 3 and ($resolutionRatioLevel == 1 or $resolutionRatioLevel == 2){
+        $fontSize: $fontSize + 2;
     }
 
-    $font_size: round($font_size);
+    $fontSize: round($fontSize);
 
-    @return $font_size;
+    @return $fontSize;
 }
 
 //Mixin changing font-sizes for different resolution of the screen:
 //
 @mixin medium_resolution {
-    @media (max-width: $medium_resolution * 1px) {
+    @media (max-width: $md * 1px) {
         @content;
     }
 }
 
 @mixin small_resolution {
-    @media (max-width: $small_resolution * 1px) {
+    @media (max-width: $sm * 1px) {
         @content;
     }
 
 }
 
 @mixin desktop_resolution {
-    @media (min-width: $large_resolution * 1px){
+    @media (min-width: $lg * 1px){
         @content;
     }
 }
 
-@mixin font_sizes($base_level){
-    font-size: font_size($base_level, 0);
+@mixin font_sizes($baseLevel){
+    font-size: font_size($baseLevel, 0);
     @include medium_resolution()
     {
-        font-size: font_size($base_level, 1);
+        font-size: font_size($baseLevel, 1);
     }
     @include small_resolution()
     {
-        font-size: font_size($base_level, 2);
+        font-size: font_size($baseLevel, 2);
     }
 
 }
 
-@mixin font_sizes2($max_font, $min_font) {
-    font-size: calc(#{$min_font}px + (#{$max_font} - #{$min_font}) * ((100vw - #{$small_resolution}px) / (#{$large_resolution} - #{$small_resolution})));
+@mixin font_sizes2($maxFont, $minFont) {
+    font-size: calc(#{$minFont}px + (#{$maxFont} - #{$minFont}) * ((100vw - #{$sm}px) / (#{$lg} - #{$sm})));
 
     @include small_resolution() {
-        font-size: #{$min_font}px;
+        font-size: #{$minFont}px;
     }
     @include desktop_resolution() {
-        font-size: #{$max_font}px;
+        font-size: #{$maxFont}px;
     }
 }
 
@@ -94,19 +94,19 @@ BASE RATIO LEVEL |    0   |    1    |   2
     $height: 0;
 
     @if $property == "small"{
-        $height: $line_small;
+        $height: $lineSmall;
     }
     @else if $property == "medium"{
-        $height: $line_medium;
+        $height: $lineMedium;
     }
     @else if $property == "normal"{
-        $height: $line_normal;
+        $height: $lineNormal;
     }
     @else if $property == "recommended"{
-        $height: $line_recommended;
+        $height: $lineRecommended;
     }
     @else{
-        $height: $line_big;
+        $height: $lineBig;
     }
 
     @return $height;
@@ -118,19 +118,19 @@ BASE RATIO LEVEL |    0   |    1    |   2
 
     $spacing: 0;
     @if $property == "small"{
-        $spacing: $letter_small;
+        $spacing: $letterSmall;
     }
     @else if $property == "medium"{
-        $spacing: $letter_medium;
+        $spacing: $letterMedium;
     }
     @else if $property == "normal"{
-        $spacing: $letter_normal;
+        $spacing: $letterNormal;
     }
     @else if $property == "recommended"{
-        $spacing: $letter_recommended;
+        $spacing: $letterRecommended;
     }
     @else{
-        $spacing: $letter_big;
+        $spacing: $letterBig;
     }
 
     @return $spacing;
@@ -148,12 +148,27 @@ body
 
 .content
 {
-    padding: $content_padding;
+    padding: $contentPadding;
 }
 
 %header-spacing {
-    line-height: 1.3;
-    margin-bottom:15px;
+    line-height: line_height(normal);
+    margin-bottom: $headerMarginBottom;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.italic
+{
+    font-style: italic;
+}
+
+.underline
+{
+    text-decoration: underline;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -161,13 +176,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-    margin-bottom: $paragraph_margin_bottom;
+    margin-bottom: $paragraphMarginBottom;
 }
 
-
-.hr {
+hr {
     border-bottom: 5px #fff solid;
 }
+
 
 h1, .the_biggest
 {
@@ -181,22 +196,22 @@ h2, .big
 
 h3, .medium
 {
-    @include font_sizes(2);
+    @include font_sizes2(map-get($l, "lg"), map-get($l, "sm"));
 }
 
 h4, .medium_small
 {
-    @include font_sizes(3);
+    @include font_sizes2(map-get($m, "lg"), map-get($m, "sm"));
 }
 
 h5, .small
 {
-    @include font_sizes(4);
+    @include font_sizes2(map-get($s, "lg"), map-get($s, "sm"));
 }
 
 h6, .the_smallest
 {
-    @include font_sizes(5);
+    @include font_sizes2(map-get($xs, "lg"), map-get($xs, "sm"));
 }
 
 ol li {

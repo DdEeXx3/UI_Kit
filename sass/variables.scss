@@ -4,10 +4,9 @@ $md: 1068;
 $sm: 735;
 
 //Base font size and size changing ratio:
-
 $baseFont: 80px;
-$base_ratio: 0.67;
-$resolution_ratio: 0.75;
+$baseRatio: 0.67;
+$resolutionRatio: 0.75;
 
 //0        |   80   |    60   |   45
 //1        |   54   |    40   |   30
@@ -19,30 +18,30 @@ $resolution_ratio: 0.75;
 //Base font sizes - alternate way:
 $xxl: ("lg": 80, "md": 60, "sm": 45);
 $xl:  ("lg": 54, "md": 40, "sm": 30);
-$l:  ("lg": 54, "md": 40, "sm": 30);
-$m:  ("lg": 54, "md": 40, "sm": 30);
-$s:  ("lg": 54, "md": 40, "sm": 30);
-$xs:  ("lg": 54, "md": 40, "sm": 30);
+$l:  ("lg": 36, "md": 27, "sm": 20);
+$m:  ("lg": 24, "md": 20, "sm": 16);
+$s:  ("lg": 16, "md": 16, "sm": 16);
+$xs:  ("lg": 11, "md": 11, "sm": 11);
 
-$baseFontSizes: 80, 60 , 45;
+$baseFontSizes: 80, 60, 45;
 
-$line_small: 0.8;
-$line_medium: 1.1;
-$line_normal: 1.3;
-$line_recommended: 1.6;
-$line_big: 2.0;
+//Spacing between lines:
+$lineSmall: 0.8;
+$lineMedium: 1.1;
+$lineNormal: 1.3;
+$lineRecommended: 1.6;
+$lineBig: 2.0;
 
 //Spacing between letters:
-
-$letter_small: -0.2em;
-$letter_medium: -0.05em;
-$letter_normal: 0.009em;
-$letter_recommended: 0.1em;
-$letter_big: 0.2em;
+$letterSmall: -0.2em;
+$letterMedium: -0.05em;
+$letterNormal: 0.009em;
+$letterRecommended: 0.1em;
+$letterBig: 0.2em;
 
 //Paddings and margins:
-$header_padding_down: 15px;
-$header_padding_left: 15px;
-$header_margin_bottom: 15px;
-$paragraph_margin_bottom: 1em;
-$content_padding: 20px;
+$headerPaddingDown: 15px;
+$headerPaddingLeft: 15px;
+$headerMarginBottom: 15px;
+$paragraphMarginBottom: 1em;
+$contentPadding: 20px;
