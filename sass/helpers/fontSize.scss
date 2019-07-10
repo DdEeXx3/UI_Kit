@@ -44,21 +44,29 @@ BASE RATIO LEVEL |    0   |    1    |   2
 
 //Mixin changing font-sizes for different resolution of the screen:
 //
-@mixin medium_resolution {
-    @media (max-width: $md * 1px) {
+
+@mixin resolution($size) {
+    @media (max-width: map-get($resolutions, $size) * 1px) {
         @content;
     }
+
 }
 
 @mixin small_resolution {
-    @media (max-width: $sm * 1px) {
+    @media (max-width: map-get($resolutions, "sm") * 1px) {
         @content;
     }
 
 }
 
+@mixin medium_resolution {
+    @media (max-width: map-get($resolutions, "md") * 1px) {
+        @content;
+    }
+}
+
 @mixin desktop_resolution {
-    @media (min-width: $lg * 1px){
+    @media (min-width: map-get($resolutions, "lg") * 1px){
         @content;
     }
 }
@@ -77,7 +85,7 @@ BASE RATIO LEVEL |    0   |    1    |   2
 }
 
 @mixin font_sizes2($maxFont, $minFont) {
-    font-size: calc(#{$minFont}px + (#{$maxFont} - #{$minFont}) * ((100vw - #{$sm}px) / (#{$lg} - #{$sm})));
+    font-size: calc(#{$minFont}px + (#{$maxFont} - #{$minFont}) * ((100vw - #{map-get($resolutions, "sm")}px) / (#{map-get($resolutions, "lg")} - #{map-get($resolutions, "sm")})));
 
     @include small_resolution() {
         font-size: #{$minFont}px;
