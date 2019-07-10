@@ -1,6 +1,7 @@
 @import 'reset';
 @import 'variables';
-@import 'typography';
+@import './helpers/fontSize';
+@import './componets/typography';
 
 
 //$line-height: 24px;
