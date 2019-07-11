@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://https://ddeexx3.github.io/UI_Kit/blog</id>
+    <title>UI Kit Blog</title>
+    <updated>2019-07-10T06:00:00Z</updated>
+    <generator>Feed for Node.js</generator>
+    <link rel="alternate" href="https://https://ddeexx3.github.io/UI_Kit/blog"/>
+    <subtitle>The best place to stay up-to-date with the latest UI Kit news and events.</subtitle>
+    <logo>https://https://ddeexx3.github.io/UI_Kit/img/favicon.ico</logo>
+    <rights>Copyright © 2019 Softjourn Polska</rights>
+    <entry>
+        <title type="html"><![CDATA[Beggining of layout work]]></title>
+        <id>https://https://ddeexx3.github.io/UI_Kit/blog/2019/07/10/layout.html</id>
+        <link href="https://https://ddeexx3.github.io/UI_Kit/blog/2019/07/10/layout.html">
+        </link>
+        <updated>2019-07-10T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>Second week of my intership started with making functions for flex content in SASS. This functions allow to create dynamically classes for changing grid size of an element. I've created also Demo Page, which presents this functionality.</p>
+]]></summary>
+        <author>
+            <name>Bartek Grabarczyk</name>
+            <uri>https://www.facebook.com/bartek.grabarczyk.3</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Work on Typography has been finished]]></title>
+        <id>https://https://ddeexx3.github.io/UI_Kit/blog/2019/07/07/typography.html</id>
+        <link href="https://https://ddeexx3.github.io/UI_Kit/blog/2019/07/07/typography.html">
+        </link>
+        <updated>2019-07-07T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>By the first week of my intership I was working on typography functions in SASS. This functions let fonts to change its sizes dynamically, depending on screen resolution.</p>
+]]></summary>
+        <author>
+            <name>Bartek Grabarczyk</name>
+            <uri>https://www.facebook.com/bartek.grabarczyk.3</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Intership has started]]></title>
+        <id>https://https://ddeexx3.github.io/UI_Kit/blog/2019/07/01/start.html</id>
+        <link href="https://https://ddeexx3.github.io/UI_Kit/blog/2019/07/01/start.html">
+        </link>
+        <updated>2019-07-01T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>This is was the first day of my holiday intership. I met with Denys and we decided to start developing our UI Kit.</p>
+]]></summary>
+        <author>
+            <name>Bartek Grabarczyk</name>
+            <uri>https://www.facebook.com/bartek.grabarczyk.3</uri>
+        </author>
+    </entry>
+</feed>
