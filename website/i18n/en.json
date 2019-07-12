@@ -7,13 +7,13 @@
     "docs": {
       "doc1": {
         "title": "Setting Up",
-        "sidebar_label": "Example Page"
+        "sidebar_label": "Installation"
       },
       "doc2": {
-        "title": "document number 2"
+        "title": "Font Size"
       },
       "doc3": {
-        "title": "This is document number 3"
+        "title": "Grid Layout"
       },
       "doc4": {
         "title": "Other Document"
@@ -24,15 +24,14 @@
     },
     "links": {
       "Getting Started": "Getting Started",
-      "API": "API",
       "Demo Page": "Demo Page",
-      "Help": "Help",
-      "Blog": "Blog"
+      "Blog": "Blog",
+      "GitHub": "GitHub"
     },
     "categories": {
-      "Docusaurus": "Docusaurus",
-      "First Category": "First Category",
-      "Second Category": "Second Category"
+      "Setting Up": "Setting Up",
+      "How to use": "How to use",
+      "First Category": "First Category"
     }
   },
   "pages-strings": {

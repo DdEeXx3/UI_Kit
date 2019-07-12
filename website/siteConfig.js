@@ -39,10 +39,11 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'doc1', label: 'Getting Started'},
-    {doc: 'doc4', label: 'API'},
-    {href: 'https://ddeexx3.github.io/UI_Kit/', label: 'Demo Page'},
-    {page: 'help', label: 'Help'},
+    //{doc: 'doc4', label: 'API'},
+    {page: 'demo.html', label: 'Demo Page'},
+    //{page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
+    {href: "https://github.com/DdEeXx3/UI_Kit", label: "GitHub"}
   ],
 
   // If you have users set above, you add it here:
@@ -102,6 +103,7 @@ const siteConfig = {
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
   //   repoUrl: 'https://github.com/facebook/test-site',
+  separateCss: ['ui_kit.css']
 };
 
 module.exports = siteConfig;
