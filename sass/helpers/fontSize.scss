@@ -46,10 +46,16 @@ BASE RATIO LEVEL |    0   |    1    |   2
 //
 
 @mixin resolution($size) {
-    @media (max-width: map-get($resolutions, $size) * 1px) {
+    @if $size == "lg"
+    {
         @content;
     }
-
+    @else
+    {
+        @media (max-width: map-get($resolutions, $size) * 1px) {
+            @content;
+        }
+    }
 }
 
 @mixin small_resolution {
