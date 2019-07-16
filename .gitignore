@@ -13,4 +13,5 @@ Thumbs.db
 node_modules/*
 dist/*
 build/*
-website/*
+/website/node_modules/*
+/website/build/*
