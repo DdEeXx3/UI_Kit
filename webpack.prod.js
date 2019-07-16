@@ -4,7 +4,7 @@ module.exports = {
     entry: ["./sass/app.scss"],
     plugins: [
         new MiniCssExtractPlugin({
-            filename: '../build/ui_kit.css',
+            filename: '../website/static/ui_kit.css',
         }),
     ],
     module: {
