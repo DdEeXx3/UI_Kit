@@ -77,3 +77,11 @@ button:hover
         box-shadow: 0px 0px 7px $colorValue;
     }
 }
+
+@function customColor($color)
+{
+    .button_white
+    {
+        background-color: $color;
+    }
+}

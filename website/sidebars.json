@@ -1,9 +1,9 @@
 {
   "docs": {
     "Setting Up": ["doc1"],
-    "How to use": ["doc2", "doc3"]
+    "How to use": ["doc2", "doc3", "doc4"]
   },
   "docs-other": {
-    "First Category": ["doc4", "doc5"]
+    "First Category": ["doc5"]
   }
 }

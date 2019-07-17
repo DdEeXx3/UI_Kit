@@ -17,6 +17,8 @@ After that, you can use our tool immediately.
 </body>
 ```
 
+REMEMBER! All your CSS files should be included in HTML after our CSS!
+
 ## That's it!
 
 UI Kit is now ready to use! :D

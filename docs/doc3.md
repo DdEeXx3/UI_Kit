@@ -56,8 +56,8 @@ To understand how our grid classes work, let's start from basic example. We crea
 - "col_lg_6"
 - "col_md_8"
 - "col_sm_10"
-\
-\
+<br/>
+
 Apart from this we use class "big" to set font size inside our div to "big". See the code and result of executing it to understand how it works:
 
 ```html
@@ -95,8 +95,15 @@ Apart from this we use class "big" to set font size inside our div to "big". See
 </body>
 </html>
 ```
+See effect of executed code:
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="css,result" data-user="ddeexx3" data-slug-hash="VoZzoa" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="GridLayout - example 1">
+  <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/VoZzoa/">
+  GridLayout - example 1</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-[See effect of executed code >](https://www.w3schools.com/code/tryit.asp?filename=G5XEWM7HBT7K)
+<!--[See effect of executed code >](https://www.w3schools.com/code/tryit.asp?filename=G5XEWM7HBT7K)-->
 
 ## Another example
 
@@ -106,8 +113,8 @@ As we remember, our grid has 12 columns, so it's easy to calculate that:
 - in desktop screen our div must be 2 columns width,
 - in tablet screen our div must be 4 columns width,
 - in mobile screen our div must be 6 column width.
-\
-\
+<br/>
+
 So, our divs must contain following classes:
 - "col_lg_2",
 - "col_md_4",
@@ -155,8 +162,14 @@ Let's check the code and see how easy it is!:
 </body>
 </html>
 ```
-
-[See effect of executed code >](https://www.w3schools.com/code/tryit.asp?filename=G5XFCVHUHN1U)
+See effect of executed code:
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="html,result" data-user="ddeexx3" data-slug-hash="NQKaPY" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="GridLayout - example 2">
+  <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/NQKaPY/">
+  GridLayout - example 2</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<!--[See effect of executed code >](https://www.w3schools.com/code/tryit.asp?filename=G5XFCVHUHN1U)-->
 
 ## Harder example
 
@@ -261,7 +274,15 @@ Final code is like this below. Follow it and see how it works:
 </body>
 </html>
 ```
-[See effect of executed code >](https://www.w3schools.com/code/tryit.asp?filename=G5XGCZU2A4XN)
+See effect of executed code:
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="html,result" data-user="ddeexx3" data-slug-hash="MNgEjx" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="GridLayout - example 3">
+  <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/MNgEjx/">
+  GridLayout - example 3</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<!--[See effect of executed code >](https://www.w3schools.com/code/tryit.asp?filename=G5XGCZU2A4XN)-->
 
 ## Important note
 
@@ -310,4 +331,14 @@ Let's return to our example with 6 identic divs. Now, one of them is 7 columns w
 </body>
 </html>
 ```
-[See effect of executed code >](https://www.w3schools.com/code/tryit.asp?filename=G5XGLXEGN2DX)
+See effect of executed code:
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="html,result" data-user="ddeexx3" data-slug-hash="LwPzxZ" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="GridLayout - example 4">
+  <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/LwPzxZ/">
+  GridLayout - example 4</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<!--[See effect of executed code >](https://www.w3schools.com/code/tryit.asp?filename=G5XGLXEGN2DX)-->
+<br/>
+
+[See demo page showing grid layout >](/UI_Kit/layoutDemo.html)
