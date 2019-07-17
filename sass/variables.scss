@@ -52,3 +52,46 @@ $contentPadding: 20px;
 //Number of max columns amount and gap between them:
 $columnsAmount: 12;
 $gridGap: 10px;
+
+//Button Colors:
+$buttonColors:
+(
+    "blue": #0070c9e7,
+    "green": #46a046e7,
+    "red":#b92929e7,
+    "yellow": #f0b81ee7,
+    "black": #1f1e1ee7,
+    "white": #ecf0f1e7,
+    "gray": #686868e7,
+    "pink": #a02f7ae7,
+    "brown": #996633e7,
+    "orange": #db6618e7
+);
+
+//Button sizes:
+$buttonSizes:
+(
+    "small": ("paddingH": 5px, "paddingV": 12px, "margin": 5px, "minFontSize": 9, "maxFontSize": 11),
+    "medium": ("paddingH": 10px, "paddingV": 25px, "margin": 10px, "minFontSize": 11, "maxFontSize": 16),
+    "big": ("paddingH": 20px, "paddingV": 50px, "margin": 20px, "minFontSize": 16, "maxFontSize": 24)
+);
+
+//Button radius:
+$buttonRadius:
+(
+    "no_radius": 0,
+    "small_radius": 0.5em,
+    "medium_radius": 1em,
+    "big_radius": 2em,
+    "oval": 50%
+);
+
+//Button effects:
+$buttonEffects:
+(
+    "hover_opacity": ("opacity": 0.8, "transition": 0.8s),
+    "hover_down": ("translateX": 0px, "translateY": 10px),
+    "hover_up": ("translateX": 0px, "translateY": -10px),
+    "hover_left": ("translateX": -10px, "translateY": 0px),
+    "hover_right": ("translateX": 10px, "translateY": 0px)
+);

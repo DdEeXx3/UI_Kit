@@ -1,0 +1,79 @@
+button:hover
+{
+    cursor: pointer;
+}
+//Creating classes for each size of button:
+@each $size, $sizeValues in $buttonSizes
+{
+    .button_#{$size}
+    {
+        padding: map-get($sizeValues, "paddingH") map-get($sizeValues, "paddingV");
+        margin: map-get($sizeValues, "margin") 0;
+        color: #ecf0f1;
+        @include font_sizes2(map-get($sizeValues, "maxFontSize"), map-get($sizeValues, "minFontSize"));
+    }
+}
+
+//Creating classes for each radius level of button:
+@each $radiusName, $radiusValue in $buttonRadius
+{
+    .button_#{$radiusName}
+    {
+        border-radius: $radiusValue;
+    }
+}
+
+//Creating classes for each color of button:
+@each $colorName, $colorValue in $buttonColors
+{
+    .button_#{$colorName}
+    {
+        @if $colorName == "white"
+        {
+            color: black;
+        }
+        background-color: $colorValue;
+        overflow: hidden;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        &:focus
+        {
+            outline: none;
+            border: 1px solid $colorValue;
+            box-shadow: 0 0 10px $colorValue;
+        }
+    }
+}
+
+//Creating classes for each hover effect of button:
+@each $buttonEffect, $EffectValues in $buttonEffects
+{
+    @if $buttonEffect == "hover_opacity"
+    {
+        .button_#{$buttonEffect}:hover
+        {
+            opacity: map-get($EffectValues, "opacity");
+            transition: map-get($EffectValues, "transition");
+        }
+    }
+    @else
+    {
+        .button_#{$buttonEffect}:hover
+        {
+            -webkit-transform: translate(map-get($EffectValues, "translateX"), map-get($EffectValues, "translateY"));
+            -ms-transform: translate(map-get($EffectValues, "translateX"), map-get($EffectValues, "translateY"));
+            -o-transform: translate(map-get($EffectValues, "translateX"), map-get($EffectValues, "translateY"));
+            transform: translate(map-get($EffectValues, "translateX"), map-get($EffectValues, "translateY"));
+            
+        }
+    }
+}
+@each $colorName, $colorValue in $buttonColors
+{
+    .button_hover_shadow_#{$colorName}:hover
+    {
+        -webkit-box-shadow: 0px 0px 7px $colorValue;
+        box-shadow: 0px 0px 7px $colorValue;
+    }
+}
