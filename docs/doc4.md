@@ -133,8 +133,11 @@ See effect of executed code:
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-As you can see, primary color is a bright one. We proked the concept that it has font and border color of secondary one. That's why, primary color should be bright and secondary - dark.
+<br>
+IMPORTANT NOTE!
+<br>
+<br>
+As you can see, primary color is a bright one. We proked the concept that it has font and border color of secondary one. Whereas, font color of other buttons is primary. That's why, primary color should be bright and secondary - dark.
 
 ## Hover effect
 
