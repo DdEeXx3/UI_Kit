@@ -1,7 +1,10 @@
 //Breakpoint resolutions of screen
-$lg: 1600;
-$md: 1068;
-$sm: 735;
+$resolutions:
+(
+    "lg": 1068,
+    "md": 1068,
+    "sm": 735
+);
 
 //Base font size and size changing ratio:
 $baseFont: 80px;
@@ -45,3 +48,7 @@ $headerPaddingLeft: 15px;
 $headerMarginBottom: 15px;
 $paragraphMarginBottom: 1em;
 $contentPadding: 20px;
+
+//Number of max columns amount and gap between them:
+$columnsAmount: 12;
+$gridGap: 10px;

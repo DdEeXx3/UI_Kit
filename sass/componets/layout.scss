@@ -1,0 +1,100 @@
+body
+{
+    @include font_sizes2(map-get($m, "lg"), map-get($m, "sm"));
+}
+.container
+{
+    display: grid;
+    grid-template-columns: repeat($columnsAmount, 1fr);
+    grid-gap: $gridGap;
+}
+.box
+{
+    padding-top: 100%;
+    margin: 10px;
+    background-color: rgba(168, 201, 211, 0.548);
+}
+.demo_link
+{
+    @include font_sizes2(map-get($l, "lg"), map-get($l, "sm"));
+}
+
+//Making a fuction for creating css grid classes:
+@each $key, $resolution in $resolutions
+{
+    @for $i from 1 through $columnsAmount
+    {
+        @include resolution($key)
+        {
+            .col_#{$key}_#{$i}
+            {
+                grid-column-start: span $i;
+            }
+        }   
+    }
+}
+
+//Styling demo page:
+
+.box2
+{
+    margin: 10px;
+    background-color: darken(rgba(176, 203, 211, 0.493), 30%);
+    //background-color: rgba(84, 179, 207, 0.493);
+    border-radius: 0.5em;
+}
+.box3
+{
+    margin: 10px;
+    background-color: rgba(176, 203, 211, 0.493);
+    border-radius: 0.5em;
+    .content
+    {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+}
+.box4
+{
+    margin: 10px;
+    border-radius: 0.5em;
+}
+.box5
+{
+    display: grid;
+    background-color: rgba(176, 203, 211, 0.493);
+    border-radius: 0.5em;
+    margin: 10px;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.content
+{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    @include small_resolution()
+    {
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+    @include medium_resolution()
+    {
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+}
+.footer
+{
+    display: grid;
+    grid-template-columns: repeat($columnsAmount, 1fr);
+    grid-gap: $gridGap;
+}
+.picture
+{
+    width: 50px;
+    border-radius: 0.5em;
+}
+.picture2
+{
+    width: 30px;
+    border-radius: 0.5em;
+}
