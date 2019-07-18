@@ -1,6 +1,8 @@
 body
 {
     @include font_sizes2(map-get($m, "lg"), map-get($m, "sm"));
+    background-color: $primary;
+    color: $secondary
 }
 .container
 {
@@ -12,7 +14,9 @@ body
 {
     padding-top: 100%;
     margin: 10px;
-    background-color: rgba(168, 201, 211, 0.548);
+    //background-color: rgba(168, 201, 211, 0.548);
+    background-color: $teritary;
+    color: $primary;
 }
 .demo_link
 {
@@ -26,7 +30,7 @@ body
     {
         @include resolution($key)
         {
-            .col_#{$key}_#{$i}
+            .col-#{$key}-#{$i}
             {
                 grid-column-start: span $i;
             }
@@ -39,14 +43,18 @@ body
 .box2
 {
     margin: 10px;
-    background-color: darken(rgba(176, 203, 211, 0.493), 30%);
+    background-color: $secondary;
+    color: $primary;
+    //background-color: darken(rgba(176, 203, 211, 0.493), 30%);
     //background-color: rgba(84, 179, 207, 0.493);
     border-radius: 0.5em;
 }
 .box3
 {
     margin: 10px;
-    background-color: rgba(176, 203, 211, 0.493);
+    background-color: $teritary;
+    color: $primary;
+    //background-color: rgba(176, 203, 211, 0.493);
     border-radius: 0.5em;
     .content
     {
@@ -62,7 +70,9 @@ body
 .box5
 {
     display: grid;
-    background-color: rgba(176, 203, 211, 0.493);
+    background-color: $teritary;
+    color: $primary;
+    //background-color: rgba(176, 203, 211, 0.493);
     border-radius: 0.5em;
     margin: 10px;
     grid-template-rows: 1fr 1fr 1fr;
@@ -97,4 +107,13 @@ body
 {
     width: 30px;
     border-radius: 0.5em;
+}
+
+.demo-link
+{
+    color: $primary;
+    &:hover
+    {
+        color: $teritary;
+    }
 }

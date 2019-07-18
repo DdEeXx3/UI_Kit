@@ -1,3 +1,13 @@
+//Site colors palette:
+$primary: #F6F4F2;
+$secondary: #425664;
+$teritary: #C6AD8F;
+$success: #3DA557;
+$error: #A83E3E;
+$warning: #E8AA37;
+$link: #0070c9;
+$link_hover: #005faa;
+
 //Breakpoint resolutions of screen
 $resolutions:
 (
@@ -53,21 +63,6 @@ $contentPadding: 20px;
 $columnsAmount: 12;
 $gridGap: 10px;
 
-//Button Colors:
-$buttonColors:
-(
-    "blue": #0070c9e7,
-    "green": #46a046e7,
-    "red":#b92929e7,
-    "yellow": #f0b81ee7,
-    "black": #1f1e1ee7,
-    "white": #ecf0f1e7,
-    "gray": #686868e7,
-    "pink": #a02f7ae7,
-    "brown": #996633e7,
-    "orange": #db6618e7
-);
-
 //Button sizes:
 $buttonSizes:
 (
@@ -79,19 +74,19 @@ $buttonSizes:
 //Button radius:
 $buttonRadius:
 (
-    "no_radius": 0,
-    "small_radius": 0.5em,
-    "medium_radius": 1em,
-    "big_radius": 2em,
+    "no-radius": 0,
+    "small-radius": 0.5em,
+    "medium-radius": 1em,
+    "big-radius": 2em,
     "oval": 50%
 );
 
 //Button effects:
 $buttonEffects:
 (
-    "hover_opacity": ("opacity": 0.8, "transition": 0.8s),
-    "hover_down": ("translateX": 0px, "translateY": 10px),
-    "hover_up": ("translateX": 0px, "translateY": -10px),
-    "hover_left": ("translateX": -10px, "translateY": 0px),
-    "hover_right": ("translateX": 10px, "translateY": 0px)
+    "hover-opacity": ("opacity": 0.8, "transition": 0.8s),
+    "hover-down": ("translateX": 0px, "translateY": 10px),
+    "hover-up": ("translateX": 0px, "translateY": -10px),
+    "hover-left": ("translateX": -10px, "translateY": 0px),
+    "hover-right": ("translateX": 10px, "translateY": 0px)
 );

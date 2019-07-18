@@ -1,15 +1,25 @@
-button:hover
+button
 {
-    cursor: pointer;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    &:hover
+    {
+        cursor: pointer;
+    }
+    &:focus
+    {
+        outline: none;
+    }
 }
 //Creating classes for each size of button:
 @each $size, $sizeValues in $buttonSizes
 {
-    .button_#{$size}
+    .button-#{$size}
     {
         padding: map-get($sizeValues, "paddingH") map-get($sizeValues, "paddingV");
         margin: map-get($sizeValues, "margin") 0;
-        color: #ecf0f1;
         @include font_sizes2(map-get($sizeValues, "maxFontSize"), map-get($sizeValues, "minFontSize"));
     }
 }
@@ -17,41 +27,69 @@ button:hover
 //Creating classes for each radius level of button:
 @each $radiusName, $radiusValue in $buttonRadius
 {
-    .button_#{$radiusName}
+    .button-#{$radiusName}
     {
         border-radius: $radiusValue;
     }
 }
 
 //Creating classes for each color of button:
-@each $colorName, $colorValue in $buttonColors
+@mixin button-color($color)
 {
-    .button_#{$colorName}
+    border-color: $color;
+    color: $primary;
+    background-color: $color;
+    &:focus
     {
-        @if $colorName == "white"
-        {
-            color: black;
-        }
-        background-color: $colorValue;
-        overflow: hidden;
-        -webkit-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        &:focus
-        {
-            outline: none;
-            border: 1px solid $colorValue;
-            box-shadow: 0 0 10px $colorValue;
-        }
+        border: 1px solid $color;
+        box-shadow: 0 0 10px $color;
     }
 }
+
+@mixin button-color-shadow($color)
+{
+    -webkit-box-shadow: 0px 0px 7px $color;
+    box-shadow: 0px 0px 7px $color;
+}
+.button-primary
+{
+    @include button-color($primary);
+    border-color: $secondary;
+    color: $secondary;
+    &:focus
+    {
+        border: 1px solid $secondary;
+        box-shadow: 0 0 10px $secondary;
+    }
+}
+.button-secondary
+{
+    @include button-color($secondary);
+}
+.button-teritary
+{
+    @include button-color($teritary);
+}
+.button-success
+{
+    @include button-color($success);
+}
+.button-error
+{
+    @include button-color($error);
+}
+.button-warning
+{
+    @include button-color($warning);
+}
+//KONIEC
 
 //Creating classes for each hover effect of button:
 @each $buttonEffect, $EffectValues in $buttonEffects
 {
-    @if $buttonEffect == "hover_opacity"
+    @if $buttonEffect == "hover-opacity"
     {
-        .button_#{$buttonEffect}:hover
+        .button-#{$buttonEffect}:hover
         {
             opacity: map-get($EffectValues, "opacity");
             transition: map-get($EffectValues, "transition");
@@ -59,7 +97,7 @@ button:hover
     }
     @else
     {
-        .button_#{$buttonEffect}:hover
+        .button-#{$buttonEffect}:hover
         {
             -webkit-transform: translate(map-get($EffectValues, "translateX"), map-get($EffectValues, "translateY"));
             -ms-transform: translate(map-get($EffectValues, "translateX"), map-get($EffectValues, "translateY"));
@@ -69,11 +107,28 @@ button:hover
         }
     }
 }
-@each $colorName, $colorValue in $buttonColors
+
+.button-hover-shadow-primary:hover
 {
-    .button_hover_shadow_#{$colorName}:hover
-    {
-        -webkit-box-shadow: 0px 0px 7px $colorValue;
-        box-shadow: 0px 0px 7px $colorValue;
-    }
+    @include button-color-shadow($primary);
+}
+.button-hover-shadow-secondary:hover
+{
+    @include button-color-shadow($secondary);
+}
+.button-hover-shadow-teritary:hover
+{
+    @include button-color-shadow($teritary);
+}
+.button-hover-shadow-success:hover
+{
+    @include button-color-shadow($success);
+}
+.button-hover-shadow-error:hover
+{
+    @include button-color-shadow($error);
+}
+.button-hover-shadow-warning:hover
+{
+    @include button-color-shadow($warning);
 }

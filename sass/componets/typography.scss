@@ -52,7 +52,6 @@
 
 body
 {
-    background-color: #dfe6ec42;
     width: 100%;
     line-height: line_height(normal);
     letter-spacing: letter_spacing(normal);
@@ -101,7 +100,7 @@ hr
 
 a
 {
-    color: #0070c9;
+    color: $link;
     text-decoration: underline;
     text-decoration-color: transparent;
     cursor: pointer;
@@ -111,30 +110,30 @@ a
 
     &:hover
     {
-        color: #005faa;
+        color: $link_hover;
         text-decoration: underline;
         opacity: 0.85;
     }
 }
 
-.text_right
+.text-right
 {
     text-align: right;
 }
 
-.text_left
+.text-left
 {
     text-align: left;
 }
 
-.text_center
+.text-center
 {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
 
-h1, .the_biggest
+h1, .the-biggest
 {
     @include font_sizes2(map-get($xxl, "lg"), map-get($xxl, "sm"));
 }
@@ -149,7 +148,7 @@ h3, .medium
     @include font_sizes2(map-get($l, "lg"), map-get($l, "sm"));
 }
 
-h4, .medium_small
+h4, .medium-small
 {
     @include font_sizes2(map-get($m, "lg"), map-get($m, "sm"));
 }
@@ -159,7 +158,7 @@ h5, .small
     @include font_sizes2(map-get($s, "lg"), map-get($s, "sm"));
 }
 
-h6, .the_smallest
+h6, .the-smallest
 {
     @include font_sizes2(map-get($xs, "lg"), map-get($xs, "sm"));
 }
