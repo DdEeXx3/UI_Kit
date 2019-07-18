@@ -29,7 +29,7 @@ Third element: "grid-gap" is optional and specifies gap between every div in a g
 To get your work easier we created classes describing position of the element. Every class has its name according to a pattern:
 
 ```scss
-$gridClass = "col_$screenResolution_$columnsNumber";
+$gridClass = "col-$screenResolution-$columnsNumber";
 ```
 
 Where:
@@ -46,16 +46,16 @@ $screenResolution - kind of screen resolution where class is used. This paramete
 For example:
 \
 \
-class "col_sm_4" means that div is 4 of 12 columns width on mobile screens.
+class "col-sm-4" means that div is 4 of 12 columns width on mobile screens.
 
 ![Grid Div](https://i.ibb.co/d5fV3rn/Zrzut-ekranu-2019-07-12-o-15-45-43.png "Grid Divs")
 
 ## How to use them
 
 To understand how our grid classes work, let's start from basic example. We created div with class "container". This container will be our grid. Inside it, we have a div with class "box". We want it to be 6 columns width in desktop screen, 8 columns width in tablet screen and 10 columns width in mobile screen. According to pattern above, we have to give our div 3 classes:
-- "col_lg_6"
-- "col_md_8"
-- "col_sm_10"
+- "col-lg-6"
+- "col-md-8"
+- "col-sm-10"
 <br/>
 
 Apart from this we use class "big" to set font size inside our div to "big". See the code and result of executing it to understand how it works:
@@ -90,7 +90,7 @@ Apart from this we use class "big" to set font size inside our div to "big". See
     </style>
 <!--END -->
 	<div class="container">
-		<div class="box big col_lg_6 col_md_8 col_sm_10">Content</div>
+		<div class="box big col-lg-6 col-md-8 col-sm-10">Content</div>
     </div>
 </body>
 </html>
@@ -116,9 +116,9 @@ As we remember, our grid has 12 columns, so it's easy to calculate that:
 <br/>
 
 So, our divs must contain following classes:
-- "col_lg_2",
-- "col_md_4",
-- "col_sm_6".
+- "col-lg-2",
+- "col-md-4",
+- "col-sm-6".
 
 Let's check the code and see how easy it is!:
 
@@ -152,12 +152,12 @@ Let's check the code and see how easy it is!:
     </style>
 <!--END -->
 	<div class="container">
-		<div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
     </div>
 </body>
 </html>
@@ -177,9 +177,9 @@ Let's complicate a little bit our code. Before our six divs we want to add anoth
 
 ```html
 <div class="container">
-    <div class="col_lg_1 col_md_1 col_sm_1"></div>
-    <div class="header col_lg_10 col_md_10 col_sm_10"></div>
-    <div class="col_lg_1 col_md_1 col_sm_1"></div>
+    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+    <div class="header col-lg-10 col-md-10 col-sm-10"></div>
+    <div class="col-lg-1 col-md-1 col-sm-1"></div>
 </div>
 ```
 
@@ -198,11 +198,11 @@ Inside "header" div, as we said before, we want to put 2 "logo" divs and header 
 
 ```html
 <div class="container">
-    <div class="col_lg_1 col_md_1 col_sm_1"></div>
-    <div class="header col_lg_10 col_md_10 col_sm_10">
-        <div class="logo col_lg_1 col_md_2 col_sm_3">LOGO</div>
-        <h2 class="col_lg_10 col_md_8 col_sm_6">HEADER</h2>
-        <div class="logo col_lg_1 col_md_2 col_sm_3">LOGO</div>
+    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+    <div class="header col-lg-10 col-md-10 col-sm-10">
+        <div class="logo col-lg-1 col-md-2 col-sm-3">LOGO</div>
+        <h2 class="col-lg-10 col-md-8 col-sm-6">HEADER</h2>
+        <div class="logo col-lg-1 col-md-2 col-sm-3">LOGO</div>
     </div>
 
     ...
@@ -257,19 +257,19 @@ Final code is like this below. Follow it and see how it works:
     </style>
 <!--END -->
 	<div class="container">
-    	<div class="col_lg_1 col_md_1 col_sm_1"></div>
-    	<div class="header col_lg_10 col_md_10 col_sm_10">
-        	<div class="logo col_lg_1 col_md_2 col_sm_3">LOGO</div>
-        	<h2 class="col_lg_10 col_md_8 col_sm_6">HEADER</h2>
-            <div class="logo col_lg_1 col_md_2 col_sm_3">LOGO</div>
+    	<div class="col-lg-1 col-md-1 col-sm-1"></div>
+    	<div class="header col-lg-10 col-md-10 col-sm-10">
+        	<div class="logo col-lg-1 col-md-2 col-sm-3">LOGO</div>
+        	<h2 class="col-lg-10 col-md-8 col-sm-6">HEADER</h2>
+            <div class="logo col-lg-1 col-md-2 col-sm-3">LOGO</div>
         </div>
-        <div class="col_lg_1 col_md_1 col_sm_1"></div>
-		<div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
+        <div class="col-lg-1 col-md-1 col-sm-1"></div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
     </div>
 </body>
 </html>
@@ -321,12 +321,12 @@ Let's return to our example with 6 identic divs. Now, one of them is 7 columns w
     </style>
 <!--END -->
 	<div class="container">
-		<div class="box big col_lg_2 col_md_5 col_sm_7">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
+		<div class="box big col-lg-2 col-md-5 col-sm-7">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
     </div>
 </body>
 </html>

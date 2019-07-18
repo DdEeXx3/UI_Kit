@@ -9,20 +9,20 @@ Now you will learn how to use our styling buttons classes. We devided this secti
 
 ## Size
 There are 3 different classes decribing sizes of buttons, which could be used. We created claasses named:
-- "button_small",
-- "button_medium",
-- "button_big".
+- "button-small",
+- "button-medium",
+- "button-big".
 <br/>
 
 Depending on chosen class, button sizes are specified as below:
 
 |  Class |  Padding top & down |  Padding right & left | Marging top & down  | Font size |
 |:-:|:-:|:-:|:-:|:-:|
-|  button_small | 5px  | 12px  |  5px | 9px - 11px |
-| button_medium  | 10px  | 25px  |  10px | 11px - 16px |
-|  button_big |  20px |   50px | 20px | 16px - 24px  | 
+|  button-small | 5px  | 12px  |  5px | 9px - 11px |
+| button-medium  | 10px  | 25px  |  10px | 11px - 16px |
+|  button-big |  20px |   50px | 20px | 16px - 24px  | 
 
-Find differences between this three classes (there is another class - "button_white" used, it will be described later):
+Find differences between this three classes (there is another class - "button-primary" used, it will be described later):
 
 ```html
 <!DOCTYPE html>
@@ -35,10 +35,10 @@ Find differences between this three classes (there is another class - "button_wh
     <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/ui_kit.css">
 </head>
 <body>
-    <div class="text_center">
-        <button class="button_small button_white">This is small button</button>
-        <button class="button_medium button_white">This is medium button</button>
-        <button class="button_big button_white">This is big button</button>
+    <div class="text-center"><br>
+        <button class="button-small button-primary">This is small button</button>
+        <button class="button-medium button-primary">This is medium button</button>
+        <button class="button-big button-primary">This is big button</button>
     </div>
 </body>
 </html>
@@ -56,11 +56,11 @@ See effect of executed code:
 Second area of styling buttons is their border radius level. We created 5 types of it. Classes names are shown in table below:
 | Class  |  Border radius |
 |:-:|:-:|
-| button_no_radius  | 0  |
-| button_small_radius  |  0.5em |
-| button_medium_radius  | 1em  |
-| button_big_radius  | 2em  |
-| button_oval  |  50% |
+| button-no-radius  | 0  |
+| button-small-radius  |  0.5em |
+| button-medium-radius  | 1em  |
+| button-big-radius  | 2em  |
+| button-oval  |  50% |
 
 There is an example:
 ```html
@@ -74,12 +74,12 @@ There is an example:
     <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/ui_kit.css">
 </head>
 <body>
-    <div class="text_center">
-        <button class="button_medium button_no_radius button_white">This is no radius button</button>
-        <button class="button_medium button_small_radius button_white">This is small radius button</button>
-        <button class="button_medium button_medium_radius button_white">This is medium radius button</button>
-        <button class="button_medium button_big_radius button_white">This is big radius button</button>
-        <button class="button_medium button_oval button_white">This is oval button</button>
+    <div class="text-center"><br>
+        <button class="button-medium button-no-radius button-primary">This is no radius button</button>
+        <button class="button-medium button-small-radius button-primary">This is small radius button</button>
+        <button class="button-medium button-medium-radius button-primary">This is medium radius button</button>
+        <button class="button-medium button-big-radius button-primary">This is big radius button</button>
+        <button class="button-medium button-oval button-primary">This is oval button</button>
     </div>
 </body>
 </html>
@@ -95,16 +95,13 @@ See effect of executed code:
 
 ## Color
 
-Next thing is color of the button. We created 10 classes with commonly used colors. Every class describes color of its name:
-- "button_white",
-- "button_gray",
-- "button_green",
-- "button_red",
-- "button_blue",
-- "button_yellow",
-- "button_orange",
-- "button_pink",
-- "button_brown".
+Next thing is color of the button. We created by default 6 classes with colors used on your page. Every class describes color of its name. Every color can be changed and it will be described in the next chapters:
+- "button-primary",
+- "button-secondary",
+- "button-teritary",
+- "button-success",
+- "button-error",
+- "button-warning".
 
 ```html
 <!DOCTYPE html>
@@ -117,18 +114,14 @@ Next thing is color of the button. We created 10 classes with commonly used colo
     <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/ui_kit.css">
 </head>
 <body>
-    <div class="text_center">
-        <button class="button_medium button_medium_radius button_white">This is white button</button>
-        <button class="button_medium button_medium_radius button_gray">This is gray button</button>
-        <button class="button_medium button_medium_radius button_black">This is black button</button>
-        <button class="button_medium button_medium_radius button_green">This is green button</button>
-        <button class="button_medium button_medium_radius button_red">This is red button</button>
+    <div class="text-center">
+        <button class="button-medium button-medium-radius button-primary">This is primary color button</button>
+        <button class="button-medium button-medium-radius button-secondary">This is secondary color button</button>
+        <button class="button-medium button-medium-radius button-teritary">This is teritary color button</button>
     <br>
-        <button class="button_medium button_medium_radius button_blue">This is blue button</button>
-        <button class="button_medium button_medium_radius button_yellow">This is yellow button</button>
-        <button class="button_medium button_medium_radius button_orange">This is orange button</button>
-        <button class="button_medium button_medium_radius button_pink">This is pink button</button>
-        <button class="button_medium button_medium_radius button_brown">This is brown button</button>
+        <button class="button-medium button-medium-radius button-success">This is success color button</button>
+        <button class="button-medium button-medium-radius button-error">This is error color button</button>
+        <button class="button-medium button-medium-radius button-warning">This is warning button</button>
     </div>
 </body>
 </html>
@@ -144,14 +137,14 @@ See effect of executed code:
 ## Hover effect
 
 Last area of styling buttons is their hover effect. We created 6 types of them:
-- "button_hover_opacity"
-- "button_hover_shadow_$color",
-- "button_hover_up",
-- "button_hover_down",
-- "button_hover_left",
-- "button_hover_right".
+- "button-hover-opacity"
+- "button-hover-shadow-$color",
+- "button-hover-up",
+- "button-hover-down",
+- "button-hover-left",
+- "button-hover-right".
 
-As you can see, there is posibillity to chose any of shadow color of the button hover. You can replace $color in that class with every of 10 available colors.
+As you can see, there is posibillity to chose any of shadow color of the button hover. You can replace $color in that class with every of 6 available colors.
 
 ```html
 <!DOCTYPE html>
@@ -164,13 +157,13 @@ As you can see, there is posibillity to chose any of shadow color of the button 
     <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/ui_kit.css">
 </head>
 <body>
-    <div class="text_center">
-        <button class="button_medium button_medium_radius button_blue button_hover_opacity">This is hover opacity</button>
-        <button class="button_medium button_medium_radius button_blue button_hover_shadow_blue">This is hover shadow</button>
-        <button class="button_medium button_medium_radius button_blue button_hover_up">This is hover up</button>
-        <button class="button_medium button_medium_radius button_blue button_hover_down">This is hover down</button>
-        <button class="button_medium button_medium_radius button_blue button_hover_left">This is hover left</button>
-        <button class="button_medium button_medium_radius button_blue button_hover_right">This is hover right</button>
+    <div class="text-center">
+        <button class="button-medium button-medium-radius button-secondary button-hover-opacity">This is hover opacity</button>
+        <button class="button-medium button-medium-radius button-secondary button-hover-shadow-secondary">This is hover shadow</button>
+        <button class="button-medium button-medium-radius button-secondary button-hover-up">This is hover up</button>
+        <button class="button-medium button-medium-radius button-secondary button-hover-down">This is hover down</button>
+        <button class="button-medium button-medium-radius button-secondary button-hover-left">This is hover left</button>
+        <button class="button-medium button-medium-radius button-secondary button-hover-right">This is hover right</button>
     </div>
 </body>
 </html>
@@ -201,15 +194,15 @@ You can also define your own font size in every button using font-size classes f
     <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/ui_kit.css">
 </head>
 <body>
-    <div class="text_center">
-        <button class="button_medium button_medium_radius button_gray button_hover_shadow_yellow">This is medium, medium radius,<br> gray, yellow hover shadow button</button>
-        <button class="button_big button_no_radius button_pink button_hover_up">This is big, no radius,<br> pink, hover up button</button>
-        <button class="button_small button_oval button_orange button_hover_opacity button_hover_right">This is small, oval, <br>orange, hover opacity <br> hover right button</button>
+    <div class="text-center">
+        <button class="button-medium button-medium-radius button-teritary button-hover-shadow-secondary">This is medium, medium radius,<br> teritary color,<br> secondary color hover shadow button</button>
+        <button class="button-big button-no-radius button-warning button-hover-up">This is big, no radius,<br> warning color, hover up button</button>
+        <button class="button-small button-oval button-error button-hover-opacity button-hover-right">This is small, oval, <br>error color, hover opacity <br> hover right button</button>
     <br>
-        <button class="big button_big button_big_radius button_blue button_hover_shadow_green">OK</button>
-        <button class="medium button_big button_no_radius button_yellow button_hover_opacity">Medium font</button>
-        <button class="medium_small button_small button_oval button_red button_hover_shadow_red">X</button>
-        <button class="medium_small button_small button_oval button_green button_hover_shadow_green">+</button>
+        <button class="big button-big button-big-radius button-secondary button-hover-shadow-success">OK</button>
+        <button class="medium button-big button-no-radius button-primary button-hover-down button-hover-opacity">Medium font</button>
+        <button class="medium-small button-small button-oval button-error button-hover-shadow-error">X</button>
+        <button class="medium-small button-small button-oval button-success button-hover-shadow-success">+</button>
     </div>
 </body>
 </html>
