@@ -134,6 +134,8 @@ See effect of executed code:
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
+As you can see, primary color is a bright one. We proked the concept that it has font and border color of secondary one. That's why, primary color should be bright and secondary - dark.
+
 ## Hover effect
 
 Last area of styling buttons is their hover effect. We created 6 types of them:
