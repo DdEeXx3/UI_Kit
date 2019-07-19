@@ -6,7 +6,10 @@ caption
 {
     color: $primary;
 }
-
+body
+{
+    padding: 20px;
+}
 //Creating classes for table layout:
 @for $i from 1 through 100
 {
@@ -88,7 +91,7 @@ caption
     }
 }
 
-//Creating class for coloring table by default:
+//Creating class for saturation of table colors:
 @each $element, $color in $tableElementsColor
 {
     @each $saturation in $colorSaturations
