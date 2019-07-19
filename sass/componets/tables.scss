@@ -1,0 +1,176 @@
+table
+{
+    border-spacing: 0;
+}
+caption
+{
+    color: $primary;
+}
+
+//Creating classes for table layout:
+@for $i from 1 through 100
+{
+    @each $layout, $layoutValue in $tableLayout
+    {
+        @each $align, $alignValue in $tableAlign
+        {
+            .table-layout-#{$i}-#{$layout}-#{$align}
+            {
+                table-layout: $layoutValue;
+                width: #{$i}#{"%"};
+                margin-left: map-get($alignValue, "margin-left");
+                margin-right: map-get($alignValue, "margin-right");
+            }
+        }
+    }
+}
+
+//Creating classes for table radius:
+@each $radiusName, $radiusValue in $buttonRadius
+{
+    .table-#{$radiusName}
+    {
+        border-radius: 0 0 #{$radiusValue} #{$radiusValue};
+        
+        caption
+        {
+            border-radius: #{$radiusValue} #{$radiusValue} 0 0;
+        }
+
+        tr:last-child td:first-child 
+        { 
+            border-bottom-left-radius: #{$radiusValue}; 
+        }
+        tr:last-child td:last-child 
+        { 
+            border-bottom-right-radius: #{$radiusValue}; 
+        }
+    }
+}
+
+//Creating classes for table border:
+@for $i from 1 through 20
+{
+    @each $borderStyle in $tableBorders
+    {
+        .table-border-#{$i}-#{$borderStyle}
+        {
+            border-right: #{$i}px #{$borderStyle} $secondary;
+            border-left: #{$i}px #{$borderStyle} $secondary;
+            border-bottom: #{$i}px #{$borderStyle} $secondary;
+    
+            caption
+            {
+                border-right: #{$i}px #{$borderStyle} $secondary;
+                border-left: #{$i}px #{$borderStyle} $secondary;
+                border-top: #{$i}px #{$borderStyle} $secondary;
+            }
+        }
+    }
+}
+//Creating class for table padding:
+@each $paddingSize, $paddingValue in $tablePaddings
+{
+    .table-#{$paddingSize}
+    {
+        caption
+        {
+            padding: map-get($paddingValue, "caption");
+        }
+        th
+        {
+            padding: map-get($paddingValue, "header");
+        }
+        tr, td
+        {
+            padding: map-get($paddingValue, "cell");
+        }
+    }
+}
+
+//Creating class for coloring table by default:
+@each $element, $color in $tableElementsColor
+{
+    @each $saturation in $colorSaturations
+    {
+        @for $i from 0 through 100
+        {
+            .table-#{$element}-#{$saturation}-#{$i}
+            {
+                @if $saturation == "lighten"
+                {
+                    @if $element == "tr1"
+                    {
+                        tr:nth-child(2n)
+                        {
+                            background-color: lighten($color, $i)
+                        }
+                    }
+                    @else if $element == "tr2"
+                    {
+                        tr:nth-child(2n+1)
+                        {
+                            background-color: lighten($color, $i)
+                        }
+                    }
+                    @else
+                    {
+                        #{$element}
+                        {
+                            background-color: lighten($color, $i);
+                        }
+                    }
+                }
+                @else
+                {
+                    @if $element == "tr1"
+                    {
+                        tr:nth-child(2n)
+                        {
+                            background-color: darken($color, $i)
+                        }
+                    }
+                    @else if $element == "tr2"
+                    {
+                        tr:nth-child(2n+1)
+                        {
+                            background-color: darken($color, $i)
+                        }
+                    }
+                    @else
+                    {
+                        #{$element}
+                        {
+                            background-color: darken($color, $i);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Creating class for default color style:
+.table-color-default
+{
+    caption
+    {
+        background-color: $secondary;
+        color: $primary
+    }
+    th
+    {
+        background-color: lighten($teritary, 10);
+    }
+    tr 
+    {  
+        &:nth-child(2n) 
+        { 
+            background-color: $primary; 
+        }
+        &:nth-child(2n+1) 
+        { 
+            background-color: darken($primary, 5%) 
+        }
+    }
+}
