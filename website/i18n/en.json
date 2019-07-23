@@ -5,9 +5,24 @@
     "previous": "Previous",
     "tagline": "UI template for everyone!",
     "docs": {
+      "dictionary1": {
+        "title": "What is that?"
+      },
+      "dictionary2": {
+        "title": "Font Size"
+      },
+      "dictionary3": {
+        "title": "Grid Layout"
+      },
+      "dictionary4": {
+        "title": "Buttons"
+      },
+      "dictionary5": {
+        "title": "Tables"
+      },
       "doc1": {
         "title": "Setting Up",
-        "sidebar_label": "Installation"
+        "sidebar_label": "Introduction"
       },
       "doc2": {
         "title": "Font Size"
@@ -24,6 +39,7 @@
     },
     "links": {
       "Getting Started": "Getting Started",
+      "Classes Dictionary": "Classes Dictionary",
       "Demo Page": "Demo Page",
       "Blog": "Blog",
       "GitHub": "GitHub"
@@ -31,7 +47,8 @@
     "categories": {
       "Setting Up": "Setting Up",
       "How to use": "How to use",
-      "First Category": "First Category"
+      "What is that?": "What is that?",
+      "Styling page elements": "Styling page elements"
     }
   },
   "pages-strings": {

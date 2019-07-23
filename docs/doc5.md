@@ -364,4 +364,4 @@ See result of executed code:
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 <br>
-[See demo page showing button styles >](/UI_Kit/tablesDemo.html)
+[See demo page showing table styles >](/UI_Kit/tablesDemo.html)

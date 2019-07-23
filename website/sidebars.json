@@ -4,6 +4,7 @@
     "How to use": ["doc2", "doc3", "doc4", "doc5"]
   },
   "docs-other": {
-    "First Category": ["doc6"]
+    "What is that?": ["dictionary1"],
+    "Styling page elements": ["dictionary2", "dictionary3", "dictionary4", "dictionary5"]
   }
 }
