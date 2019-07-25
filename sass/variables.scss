@@ -141,15 +141,7 @@ $inputStyles:
     "style2": ("border-style": solid, "border-right": 2px, "border-left": 2px, "border-top": 2px, "border-bottom": 2px, "h-offset": 0, "v-offset": 0, "blur": 6px, "spread": 0)
 );
 
-//Form input colors:
-// $inputColors:
-// (
-//     "default": $secondary,
-//     "success": $success,
-//     "error": $error,
-//     "warning": $warning
-// );
-
+//Form input colors of every element:
 $inputColors: 
 (
     "primary": $primary, 
@@ -160,4 +152,5 @@ $inputColors:
     "warning": $warning
 );
 
+//Form placeholder opacity:
 $placeholderOpacity: 0.7;

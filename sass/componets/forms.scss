@@ -72,38 +72,7 @@ input
     }
 }
 
-// @each $style, $styleValues in $inputStyles
-// {
-//     .input-#{$style}
-//     {
-//         text-align: center;
-//         color: darken($teritary, 10);
-//         background-color: initial;
-//         border-right: map-get($styleValues, "border-right") map-get($styleValues, "border-style") $secondary;
-//         border-left: map-get($styleValues, "border-left") map-get($styleValues, "border-style") $secondary;
-//         border-top: map-get($styleValues, "border-top") map-get($styleValues, "border-style") $secondary;
-//         border-bottom: map-get($styleValues, "border-bottom") map-get($styleValues, "border-style") $secondary;
-//         &:focus
-//         {
-//             background-color: initial;
-//             outline: none;
-//             transition: box-shadow 0.2s ease-in-out;
-//             border-right: map-get($styleValues, "border-right") map-get($styleValues, "border-style") darken($secondary, 10);
-//             border-left: map-get($styleValues, "border-left") map-get($styleValues, "border-style") darken($secondary, 10);
-//             border-top: map-get($styleValues, "border-top") map-get($styleValues, "border-style") darken($secondary, 10);
-//             border-bottom: map-get($styleValues, "border-bottom") map-get($styleValues, "border-style") darken($secondary, 10);
-//             box-shadow: map-get($styleValues, "h-offset") map-get($styleValues, "v-offset") map-get($styleValues, "blur") map-get($styleValues, "spread") $secondary; 
-//         }
-//         &::placeholder
-//         {
-//             color: $teritary;
-//             text-align: center;
-//             opacity: $placeholderOpacity;
-//         }
-//     }
-
-// }
-
+//Creating classes for different colors of font, placeholder and background color:
 @each $color, $colorValue in $inputColors
 {
     .input-font-#{$color}

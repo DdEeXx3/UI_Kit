@@ -20,6 +20,9 @@
       "dictionary5": {
         "title": "Tables"
       },
+      "dictionary6": {
+        "title": "dictionary6"
+      },
       "doc1": {
         "title": "Setting Up",
         "sidebar_label": "Introduction"
@@ -35,6 +38,9 @@
       },
       "doc5": {
         "title": "Tables"
+      },
+      "doc6": {
+        "title": "Forms"
       }
     },
     "links": {
