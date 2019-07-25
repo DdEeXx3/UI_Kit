@@ -2,3 +2,12 @@
 id: dictionary6
 title: Forms
 ---
+
+|  Class name | Description  |
+|:-:|:-:|
+| [input-$size-$width](doc6#size)  | Sets size of form input: <br><br> __$size__ - value describing size of an input. <br> This parameter gets 3 values: <br> -__small__ (with 9px - 11px font size) <br> - __medium__ (with 11px - 16px font size) <br> -__big__ (with 16px - 24px font size) <br><br> __$width__ - percentage value of input width in reference to div, in which this input has been created. <br> This parameter gets values __from 1 to 100__ or __default__ |
+| [input-$radiusValue](doc6#border-radius)  |  Sets radius level of a button: <br><br> __$radiusValue__ - value describing radius level of a button. <br> This parameter gets 5 values: <br> - __no-radius__ (with 0 border radius) <br> - __small-radius__ (with 0.5em border radius) <br> - __medium-radius__ (with 1em border radius) <br> - __big-radius__ (with 2em border radius) <br> - __oval__ (with 50% border radius) |
+| [input-$style-$color](doc6#style)  |  Sets style and default color of form input: <br><br> __$style__ - number of style you want to choose. <br> This parameter gets 2 values: <br> -__style1__ (with border-bottom only) <br> -__style2__ (with border all around the input) <br><br> __$color__ - default color style of your input. This parameter gets 6 values: <br> - __primary__ (first main page color, should be light) <br> - __secondary__ (second main page color, should be dark) <br> - __teritary__ (third main page color, it may be any color) <br> - __success__ (color responsible for successes and any positive actions on your site) <br> - __error__ (color responsible for errors and any negative actions on your site) <br> - __warning__ (color resposible for displaying any warning on your site)|
+| [input-$element-$color](doc6#colors)  | Sets any input element's color: <br><br> __$element__ - any input's element you want to have color changed. <br> This parameter gets 3 values: <br> -__font__ (for changing base color of a font) <br> -__placeholder__ (for changing base color of a placeholder) <br> -__background__ (for changing base color of a background) <br><br> -__$color__ - a color on which you want to change your element. <br> This parameter gets 6 values of __$color__ variable (as in example above)|
+
+[See demo page showing form styles >](/UI_Kit/formsDemo.html)
