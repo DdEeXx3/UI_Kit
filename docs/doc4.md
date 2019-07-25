@@ -223,5 +223,8 @@ See effect of executed code:
 
 Of course you are allowed to edit buttons on your own (for example changing their height and width) to make them more personalised.
 <br>
+Important note!
+<br>
+If you want to use our class to other buttons, for example __submit__ in form, you have to add additional class __button__ to it. HTML <button> type has some properties added by default, for other buttons you have to add it by using class __button__
 
 [See demo page showing button styles >](/UI_Kit/buttonsDemo.html)

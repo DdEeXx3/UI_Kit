@@ -1,0 +1,164 @@
+input
+{
+    color: $secondary;
+    &::placeholder
+    {
+        color: $secondary;
+        opacity: $placeholderOpacity;
+    }
+}
+//Creating classes for input size:
+@each $size, $sizeValues in $inputSizes
+{
+    @for $i from 1 through 100
+    {
+        .input-#{$size}-#{$i}
+        {
+            width: #{$i}#{"%"};
+            padding: map-get($sizeValues, "paddingH") map-get($sizeValues, "paddingV");
+            margin: map-get($sizeValues, "margin") 0;
+            @include font_sizes2(map-get($sizeValues, "maxFontSize"), map-get($sizeValues, "minFontSize"));
+        }
+        .input-#{$size}-default
+        {
+            padding: map-get($sizeValues, "paddingH") map-get($sizeValues, "paddingV");
+            margin: map-get($sizeValues, "margin") 0;
+            @include font_sizes2(map-get($sizeValues, "maxFontSize"), map-get($sizeValues, "minFontSize"));
+        }
+    }
+}
+
+//Creating classes for input border radius:
+@each $radiusName, $radiusValue in $buttonRadius
+{
+    .input-#{$radiusName}
+    {
+        border-radius: $radiusValue;
+    }
+}
+
+// //Creating classes for different input styles:
+@each $style, $styleValues in $inputStyles
+{
+    @each $color, $colorValues in $inputColors
+    {
+        .input-#{$style}-#{$color}
+        {
+            text-align: center;
+            color: darken($colorValues, 10);
+            background-color: initial;
+            border-right: map-get($styleValues, "border-right") map-get($styleValues, "border-style") $colorValues;
+            border-left: map-get($styleValues, "border-left") map-get($styleValues, "border-style") $colorValues;
+            border-top: map-get($styleValues, "border-top") map-get($styleValues, "border-style") $colorValues;
+            border-bottom: map-get($styleValues, "border-bottom") map-get($styleValues, "border-style") $colorValues;
+            &:focus
+            {
+                background-color: initial;
+                outline: none;
+                transition: box-shadow 0.2s ease-in-out;
+                border-right: map-get($styleValues, "border-right") map-get($styleValues, "border-style") darken($colorValues, 10);
+                border-left: map-get($styleValues, "border-left") map-get($styleValues, "border-style") darken($colorValues, 10);
+                border-top: map-get($styleValues, "border-top") map-get($styleValues, "border-style") darken($colorValues, 10);
+                border-bottom: map-get($styleValues, "border-bottom") map-get($styleValues, "border-style") darken($colorValues, 10);
+                box-shadow: map-get($styleValues, "h-offset") map-get($styleValues, "v-offset") map-get($styleValues, "blur") map-get($styleValues, "spread") $colorValues; 
+            }
+            &::placeholder
+            {
+                color: $colorValues;
+                text-align: center;
+                opacity: $placeholderOpacity;
+            }
+        }
+    }
+}
+
+// @each $style, $styleValues in $inputStyles
+// {
+//     .input-#{$style}
+//     {
+//         text-align: center;
+//         color: darken($teritary, 10);
+//         background-color: initial;
+//         border-right: map-get($styleValues, "border-right") map-get($styleValues, "border-style") $secondary;
+//         border-left: map-get($styleValues, "border-left") map-get($styleValues, "border-style") $secondary;
+//         border-top: map-get($styleValues, "border-top") map-get($styleValues, "border-style") $secondary;
+//         border-bottom: map-get($styleValues, "border-bottom") map-get($styleValues, "border-style") $secondary;
+//         &:focus
+//         {
+//             background-color: initial;
+//             outline: none;
+//             transition: box-shadow 0.2s ease-in-out;
+//             border-right: map-get($styleValues, "border-right") map-get($styleValues, "border-style") darken($secondary, 10);
+//             border-left: map-get($styleValues, "border-left") map-get($styleValues, "border-style") darken($secondary, 10);
+//             border-top: map-get($styleValues, "border-top") map-get($styleValues, "border-style") darken($secondary, 10);
+//             border-bottom: map-get($styleValues, "border-bottom") map-get($styleValues, "border-style") darken($secondary, 10);
+//             box-shadow: map-get($styleValues, "h-offset") map-get($styleValues, "v-offset") map-get($styleValues, "blur") map-get($styleValues, "spread") $secondary; 
+//         }
+//         &::placeholder
+//         {
+//             color: $teritary;
+//             text-align: center;
+//             opacity: $placeholderOpacity;
+//         }
+//     }
+
+// }
+
+@each $color, $colorValue in $inputColors
+{
+    .input-font-#{$color}
+    {
+        color: darken($colorValue, 10);
+    }
+    .input-placeholder-#{$color}::placeholder
+    {
+        color: $colorValue;
+    }
+    .input-background-#{$color}
+    {
+        background-color: $colorValue;
+        &:focus
+        {
+            background-color: $colorValue;
+        }
+    }
+}
+
+//Styling example forms:
+.form1-container
+{
+    background-color: darken($primary, 8);
+    box-shadow: 0 0 15px 3px $secondary;
+}
+
+.form2-container
+{
+    background-color: lighten($secondary, 50);
+    box-shadow: 0 0 15px 3px $secondary;
+}
+
+.card
+{
+    background-color: rgba(160, 47, 47, 0.801);
+}
+
+.gap
+{
+    padding-top: 15%;
+}
+
+.visa
+{
+    width: 100%;
+}
+
+.belt
+{
+    background-color: black;
+    height: 50px;
+}
+.belt2
+{
+    background-color: rgb(196, 204, 204);
+    height: 50px;
+}

@@ -125,3 +125,39 @@ $tablePaddings:
     "medium-padding": ("caption": 30px, "header": 20px, "cell": 10px),
     "big-padding": ("caption": 45px, "header": 30px, "cell": 15px)
 );
+
+//Form input size:
+$inputSizes:
+(
+    "small": ("paddingH": 2px, "paddingV": 10px, "margin": 5px, "minFontSize": 9, "maxFontSize": 11),
+    "medium": ("paddingH": 4px, "paddingV": 20px, "margin": 10px, "minFontSize": 11, "maxFontSize": 16),
+    "big": ("paddingH": 6px, "paddingV": 30px, "margin": 20px, "minFontSize": 16, "maxFontSize": 24)
+);
+
+//Form input style elements:
+$inputStyles:
+(
+    "style1": ("border-style": solid, "border-right": 0, "border-left": 0, "border-top": 0, "border-bottom": 2px, "h-offset": 0, "v-offset": 6px, "blur": 4px, "spread": -4px),
+    "style2": ("border-style": solid, "border-right": 2px, "border-left": 2px, "border-top": 2px, "border-bottom": 2px, "h-offset": 0, "v-offset": 0, "blur": 6px, "spread": 0)
+);
+
+//Form input colors:
+// $inputColors:
+// (
+//     "default": $secondary,
+//     "success": $success,
+//     "error": $error,
+//     "warning": $warning
+// );
+
+$inputColors: 
+(
+    "primary": $primary, 
+    "secondary": $secondary, 
+    "teritary": $teritary, 
+    "success": $success, 
+    "error": $error, 
+    "warning": $warning
+);
+
+$placeholderOpacity: 0.7;
