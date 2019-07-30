@@ -42,6 +42,7 @@ const siteConfig = {
     {doc: 'dictionary1', label: 'Classes Dictionary'},
     //{doc: 'doc4', label: 'API'},
     {page: 'demo.html', label: 'Demo Page'},
+    {page: 'demoChair.html', label: 'Real Example'},
     //{page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
     {href: "https://github.com/DdEeXx3/UI_Kit", label: "GitHub"}
