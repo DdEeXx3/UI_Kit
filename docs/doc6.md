@@ -184,7 +184,7 @@ Last group of classes is responsible for changing default colors of input elemen
 ```
 Where:
 - $element - any input's element you want to have color changed. This parameter may get 3 values: __font__, __placeholder__ and __background__.
-- $color - a color on which you want to change your element. You can set value: __primary__, __secondary__, __teritary__, __success__, __error__ and __warning__.
+- $color - a color on which you want to change your element. You can set value: __primary__, __secondary__, __teritary__, __success__, __error__, __warning__ and __link__.
 
 ```html
 <!DOCTYPE html>

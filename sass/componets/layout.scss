@@ -43,25 +43,32 @@ body
 }
 
 //Creating function for elements width, height, padding and margin:
-@for $i from 1 through 1000
+@each $element in $layoutElements
 {
-    @each $element in $layoutElements
+    .#{$element}-auto
+    {
+        #{$element}: auto;
+    }
+    @for $i from 1 through 1000
     {
         .#{$element}-#{$i}px
         {
             #{$element}: #{$i}px;
-        }
-        @if $element == "margin" or $element == "padding"
+        }   
+    }
+    @if $element == "margin" or $element == "padding"
+    {
+        @each $direction in $elementsDirections
         {
-            @each $direction in $elementsDirections
+            .#{$element}-#{$direction}-auto
+            {
+                #{$element}-#{$direction}: auto;
+            }
+            @for $i from 1 through 1000
             {
                 .#{$element}-#{$direction}-#{$i}px
                 {
                     #{$element}-#{$direction}: #{$i}px;
-                }
-                .#{$element}-#{$direction}-auto
-                {
-                    #{$element}-#{$direction}: auto;
                 }
             }
         }

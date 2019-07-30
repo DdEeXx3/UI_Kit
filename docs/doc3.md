@@ -341,4 +341,134 @@ See effect of executed code:
 <!--[See effect of executed code >](https://www.w3schools.com/code/tryit.asp?filename=G5XGLXEGN2DX)-->
 <br/>
 
+## Paddings, margins, width and height sizes
+
+We created huge ammount of classes to let you set fastly: padding, margin, height and width of any element.
+First group of classes is responsible for sizes of whole property:
+```sass
+.$property-$size$unit
+``` 
+Where:
+- $property - any property you want to set size of. You can replace $property with: __padding__, __margin__, __width__ and __height__.
+- $unit - unit used to changing size of any property. You can replace $unit with: __px__ (which means size is set in pixels) or __percent__ (which means size is set in percents).
+- $size - size of any property you want to change. You can set values __from 1 to 1000__ for pixels and __from 1 to 100__ for percents.
+<br>
+
+For example, if you add class "margin-20px" to your element, it means that every margin of this element will be 20px big. Class "margin-20percent" will set this margin to be 20% big.
+<br>
+You can also add class below to your element:
+```sass
+.$property-auto
+```
+It will set any property size automatically.
+<br>
+
+When it comes to margins and paddings you can also set size of every property side separately. To do that use class below:
+```sass
+.$property-$side-$size$unit
+```
+Where:
+- $property - any property you want to set size of. You can replace $property with: __padding__ or __margin__.
+- $side - any side of property, which size you want to change. You can replace $side with: __top__, __bottom__, __right__ and __left__.
+<br>
+
+$size and $unit values are exactly the same as above.
+<br>
+
+Of course, in this situation you can also set size values automatically. Simply add to any element class below:
+```sass
+.$property-$side-auto
+```
+For example, if you add class "margin-top-20px" to your element it means that top margin of this element will be 20px big. Class "margin-top-20percent" will set this margin to be 20% big.
+<br>
+
+See more examples to get to know how it works:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/css/ui_kit.css">
+</head>
+<body>
+    <style>
+        .element
+        {
+            background-color: green;
+            color: white;
+        }
+    </style>
+    <div class="element width-200px height-200px margin-20px">1</div>
+    <div class="element width-200px height-200px margin-top-20px margin-bottom-20px">2</div>
+    <div class="element width-200px height-200px margin-left-auto margin-right-20px">3</div>
+    <div class="element width-200px height-200px margin-left-auto margin-right-auto margin-bottom-20px">4</div>
+    <div class="element width-50percent height-30px margin-auto">5</div>
+    <div class="element width-50percent height-100px margin-auto padding-left-15percent">6</div>
+    <div class="element width-50percent height-100px margin-auto padding-top-5percent">7</div>
+</body>
+</html>
+```
+See result of executed code:
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="result" data-user="ddeexx3" data-slug-hash="jgBKRe" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="GridLayout - example 5">
+  <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/jgBKRe/">
+  GridLayout - example 5</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+## Radius level and background color of any element
+If you want to change border radius level of any element (E.g. divs) you can use button radius class:
+```sass
+.button-$radiusLevel
+```
+To read more about it, [go to buttons section](doc4#radius-level).
+<br>
+
+You can also change background color of any element to one from 7 default values. You should use forms input classes:
+```sass
+.input-background-$color
+```
+To read more about it, [go to forms section](doc6#colors).
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/css/ui_kit.css">
+</head>
+<body>
+    <style>
+    .container
+    {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 10px;
+    }
+    </style>
+    <div class="text-center input-font-primary  container">
+        <div class="medium height-200px input-background-link col-lg-2 col-md-4 col-sm-6">No radius, link color</div>
+        <div class="medium height-200px input-background-error button-small-radius button-no-radius col-lg-2 col-md-4 col-sm-6">Small radius, error color</div>
+        <div class="medium height-200px input-background-warning button-medium-radius col-lg-2 col-md-4 col-sm-6">Medium radius, warning color</div>
+        <div class="medium height-200px input-background-secondary button-big-radius col-lg-2 col-md-4 col-sm-6">Big radius, secondary color</div>
+        <div class="medium height-200px input-background-success button-oval col-lg-2 col-md-4 col-sm-6">Oval <br> radius, success color</div>
+        <div class="medium height-200px input-background-teritary col-lg-2 col-md-4 col-sm-6">No radius defined (no radius by default), teritary color</div>
+    </div>
+</body>
+</html>
+```
+See result of executed code:
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="result" data-user="ddeexx3" data-slug-hash="QepYBr" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="GridLayout - example 6">
+  <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/QepYBr/">
+  GridLayout - example 6</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<br>
+
 [See demo page showing grid layout >](/UI_Kit/layoutDemo.html)

@@ -95,13 +95,14 @@ See effect of executed code:
 
 ## Color
 
-Next thing is color of the button. We created by default 6 classes with colors used on your page. Every class describes color of its name. Every color can be changed and it will be described in the next chapters:
+Next thing is color of the button. We created by default 7 classes with colors used on your page. Every class describes color of its name. Every color can be changed and it will be described in the next chapters:
 - "button-primary",
 - "button-secondary",
 - "button-teritary",
 - "button-success",
 - "button-error",
-- "button-warning".
+- "button-warning",
+- "button-link".
 
 ```html
 <!DOCTYPE html>
@@ -122,6 +123,8 @@ Next thing is color of the button. We created by default 6 classes with colors u
         <button class="button-medium button-medium-radius button-success">This is success color button</button>
         <button class="button-medium button-medium-radius button-error">This is error color button</button>
         <button class="button-medium button-medium-radius button-warning">This is warning button</button>
+    <br>
+         <button class="button-medium button-medium-radius button-link">This is link button</button>
     </div>
 </body>
 </html>
@@ -149,7 +152,7 @@ Last area of styling buttons is their hover effect. We created 6 types of them:
 - "button-hover-left",
 - "button-hover-right".
 
-As you can see, there is posibillity to chose any of shadow color of the button hover. You can replace $color in that class with every of 6 available colors.
+As you can see, there is posibillity to chose any of shadow color of the button hover. You can replace $color in that class with every of 7 available colors.
 
 ```html
 <!DOCTYPE html>
