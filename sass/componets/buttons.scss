@@ -82,6 +82,10 @@ button, .button
 {
     @include button-color($warning);
 }
+.button-link
+{
+    @include button-color($link);
+}
 //KONIEC
 
 //Creating classes for each hover effect of button:
@@ -131,4 +135,8 @@ button, .button
 .button-hover-shadow-warning:hover
 {
     @include button-color-shadow($warning);
+}
+.button-hover-shadow-link:hover
+{
+    @include button-color-shadow($link);
 }
