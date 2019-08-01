@@ -1,0 +1,268 @@
+//STYLING BODY OF THE NAVIGATION BAR
+.topnav 
+{
+    overflow: hidden;
+}
+.topnav a 
+{
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    //font-size: 17px;
+}
+.topnav .icon 
+{
+    display: none;
+}
+.dropdown 
+{
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+}
+.dropdown .dropbtn 
+{
+    //font-size: 17px; 
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a 
+{
+    float: none;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown:hover .dropdown-content 
+{
+    display: block;
+}
+@include small_resolution
+{
+    .topnav a:not(:first-child), .dropdown .dropbtn 
+    {
+        display: none;
+    }
+    .topnav a.icon 
+    {
+        float: right;
+        display: block;
+    }
+
+    .topnav.responsive 
+    {
+        position: relative;
+    }
+    .topnav.responsive a.icon 
+    {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a 
+    {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .topnav.responsive .dropdown 
+    {
+        float: none;
+    }
+    .topnav.responsive .dropdown-content 
+    {
+        position: relative;
+    }
+    .topnav.responsive .dropdown .dropbtn 
+    {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
+//END
+
+//Classes for coloring all of the navigation elements:
+@each $color, $colorValue in $inputColors
+{
+    .nav-#{$color}
+    {
+        .topnav
+        {
+            background-color: $colorValue;
+        }
+    }
+    .nav-font-#{$color}
+    {
+        .topnav a, .dropdown, .dropbtn
+        {
+            color: $colorValue;
+        }
+    }
+    .nav-hover-#{$color}
+    {
+        .topnav a:hover, .dropdown:hover .dropbtn 
+        {
+            background-color: lighten($colorValue, 10);
+        }
+    }
+    .nav-font-hover-#{$color}
+    {
+        .topnav a:hover, .dropdown:hover .dropbtn 
+        {
+            color: $colorValue;
+        }
+    }
+    .active-#{$color}
+    {
+        .active
+        {
+            background-color: $colorValue;
+        }
+    }
+    .dropdown-#{$color}
+    {
+        .dropdown-content
+        {
+            background-color: $colorValue;
+        }
+    }
+    .dropdown-font-#{$color}
+    {
+        .dropdown-content a
+        {
+            color: $colorValue;
+        } 
+    }
+    .dropdown-hover-#{$color}
+    {
+        .dropdown-content a:hover 
+        {
+            background-color: lighten($colorValue, 10) !important;
+        }
+    }
+    .dropdown-font-hover-#{$color}
+    {
+        .dropdown-content a:hover 
+        {
+            color: $colorValue !important;
+        }
+    }
+}
+
+//Class for default navigation color
+.nav-default-color
+{
+    .topnav
+    {
+        background-color: $secondary;
+    }
+    .topnav a, .dropdown, .dropbtn, .topnav a:hover, .dropdown:hover .dropbtn 
+    {
+        color: $primary;
+    }
+    .topnav a:hover, .dropdown:hover .dropbtn 
+    {
+        background-color: lighten($secondary, 10);
+    }
+    .active
+    {
+        background-color: $teritary;
+    }
+    .dropdown-content
+    {
+        background-color: $primary;
+    }
+    .dropdown-content a
+    {
+        color: $secondary;
+    }
+    .dropdown-content a:hover 
+    {
+        background-color: lighten($secondary, 10) !important;
+    }
+    .dropdown-content a:hover 
+    {
+        color: $primary !important;
+    }
+}
+
+//Class for nav radius level
+@each $radius, $radiusValue in $buttonRadius
+{
+    .nav-#{$radius}
+    {
+        .topnav
+        {
+            border-radius: $radiusValue;
+        }
+    }
+}
+
+//Class for nav size:
+@each $size, $sizeValues in $navigationSizes
+{
+    .nav-#{$size}
+    {
+        .topnav a
+        {
+            min-width: map-get($sizeValues, "width");
+            padding: map-get($sizeValues, "paddingV") map-get($sizeValues, "paddingH");
+            @include font_sizes2(map-get($sizeValues, "maxFontSize"), map-get($sizeValues, "minFontSize"));
+        }
+        .dropdown .dropbtn 
+        {
+            min-width: map-get($sizeValues, "width");
+            padding: map-get($sizeValues, "paddingV") map-get($sizeValues, "paddingH");
+            @include font_sizes2(map-get($sizeValues, "maxFontSize"), map-get($sizeValues, "minFontSize"));
+        }
+        .dropdown-content 
+        {
+            min-width: map-get($sizeValues, "widthDropdown");
+        }
+        @include medium_resolution
+        {
+            .topnav a
+            {
+                min-width: map-get($sizeValues, "widthTablet");
+                padding: map-get($sizeValues, "paddingV") map-get($sizeValues, "paddingH");
+            }
+            .dropdown .dropbtn 
+            {
+                min-width: map-get($sizeValues, "widthTablet");
+                padding: map-get($sizeValues, "paddingV") map-get($sizeValues, "paddingH");
+            }
+            .dropdown-content 
+            {
+                min-width: map-get($sizeValues, "widthDropdownTablet");
+            }
+            .dropdown-content a
+            {
+                padding: map-get($sizeValues, "paddingV") map-get($sizeValues, "paddingH");
+            }
+        }
+        @include small_resolution
+        {
+            .topnav a, .dropdown .dropbtn
+            {
+                min-width: 20px;
+                padding: 14px 16px;
+            }
+            .dropdown-content a
+            {
+                padding: 12px 16px;
+            }
+        }
+    }
+}

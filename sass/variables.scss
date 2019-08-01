@@ -166,3 +166,14 @@ $inputColors:
 
 //Form placeholder opacity:
 $placeholderOpacity: 0.7;
+
+//Navigation bar sizes:
+$navigationSizes:
+(
+    "the-smallest": ("width": 30px, "widthDropdown": 100px, "widthTablet": 20px, "widthDropdownTablet": 67px, "paddingV": 10px, "paddingH": 12px, "minFontSize": 9, "maxFontSize": 11),
+    "small": ("width": 60px, "widthDropdown": 125px, "widthTablet": 40px, "widthDropdownTablet": 83px,  "paddingV": 14px, "paddingH": 16px, "minFontSize": 11, "maxFontSize": 14),
+    "medium-small": ("width": 90px, "widthDropdown": 185px, "widthTablet": 60px, "widthDropdownTablet": 123px, "paddingV": 18px, "paddingH": 20px, "minFontSize": 14, "maxFontSize": 16),
+    "medium": ("width": 120px, "widthDropdown": 240px, "widthTablet": 80px, "widthDropdownTablet": 160px, "paddingV": 22px, "paddingH": 24px, "minFontSize": 16, "maxFontSize": 20),
+    "big": ("width": 150px, "widthDropdown": 295px, "widthTablet": 100px, "widthDropdownTablet": 197px, "paddingV": 26px, "paddingH": 28px, "minFontSize": 20, "maxFontSize": 24),
+    "the-biggest": ("width": 180px, "widthDropdown": 355px, "widthTablet": 120px, "widthDropdownTablet": 237px, "paddingV": 30px, "paddingH": 32px, "minFontSize": 24, "maxFontSize": 28)
+);
