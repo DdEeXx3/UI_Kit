@@ -9,91 +9,351 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="text-center nav-medium nav-small-radius nav-default-color">
-        <ul class="topnav" id="myTopnav">
-            <li><a href="#home" class="active">Home</a></li>
+    <p class="medium padding-20px">This is the-smallest navigation bar:</p>
+    <div class="nav-the-smallest nav-small-radius nav-default-color">
+        <ul class="topnav" id="myTopnav1">
+            <li class="active"><a href="#home">Home</a></li>
             <li><a href="#news">News</a></li>
             <li><a href="#contact">Contact</a></li>
             <li class="dropdown">
                 <div class="dropbtn">Dropdown
-                <i class="fa fa-caret-down"></i>
+                    <i class="fa fa-caret-down"></i>
                 </div>
-                <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-                </div>
+                <ul class="dropdown-content">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
             </li>
             <li><a href="#about">About</a></li>
-            <li><a href="javascript:void(0);" class="icon" onclick="responsiveNavigation()">&#9776;</a></li>
+            <li class="icon" onclick="responsiveNavigation1()"><a href="javascript:void(0);">&#9776;</a></li>
         </ul>
     </div>
-    <div class= "text-center padding-20px">
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
-        <h1>Lorem ipsum</h1>
+    <br>
+    <p class="medium padding-20px">This is small navigation bar:</p>
+    <div class="nav-small nav-small-radius nav-default-color">
+        <ul class="topnav" id="myTopnav2">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+                <div class="dropbtn">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="dropdown-content">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li class="icon" onclick="responsiveNavigation2()"><a href="javascript:void(0);">&#9776;</a></li>
+        </ul>
     </div>
-    <script>
-        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-        function responsiveNavigation() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
-        }
-    </script>
-    <script>
-        window.onscroll = function() {stickyNavigation()};
-
-        var navbar = document.getElementById("nav-sticky");
-        var sticky = navbar.offsetTop;
-
-        function stickyNavigation() {
-            if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-            } else {
-            navbar.classList.remove("sticky");
-            }
-        }
-    </script>
+    <br>
+    <p class="medium padding-20px">This is medium-small navigation bar:</p>
+    <div class="nav-medium-small nav-small-radius nav-default-color">
+        <ul class="topnav" id="myTopnav3">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+                <div class="dropbtn">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="dropdown-content">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li class="icon" onclick="responsiveNavigation3()"><a href="javascript:void(0);">&#9776;</a></li>
+        </ul>
+    </div>
+    <br>
+    <p class="medium padding-20px">This is medium navigation bar:</p>
+    <div class="nav-medium nav-small-radius nav-default-color">
+        <ul class="topnav" id="myTopnav4">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+                <div class="dropbtn">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="dropdown-content">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li class="icon" onclick="responsiveNavigation4()"><a href="javascript:void(0);">&#9776;</a></li>
+        </ul>
+    </div>
+    <br>
+    <p class="medium padding-20px">This is big navigation bar:</p>
+    <div class="nav-big nav-small-radius nav-default-color">
+        <ul class="topnav" id="myTopnav5">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+                <div class="dropbtn">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="dropdown-content">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li class="icon" onclick="responsiveNavigation5()"><a href="javascript:void(0);">&#9776;</a></li>
+        </ul>
+    </div>
+    <br>
+    <p class="medium padding-20px">This is the-biggest navigation bar:</p>
+    <div class="nav-the-biggest nav-small-radius nav-default-color">
+        <ul class="topnav" id="myTopnav6">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+                <div class="dropbtn">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="dropdown-content">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li class="icon" onclick="responsiveNavigation6()"><a href="javascript:void(0);">&#9776;</a></li>
+        </ul>
+    </div>
+    <br>
+    <p class="medium padding-20px">This is no-radius navigation bar:</p>
+    <div class="nav-medium nav-no-radius nav-default-color">
+        <ul class="topnav" id="myTopnav7">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+                <div class="dropbtn">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="dropdown-content">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li class="icon" onclick="responsiveNavigation7()"><a href="javascript:void(0);">&#9776;</a></li>
+        </ul>
+    </div>
+    <br>
+    <p class="medium padding-20px">This is small radius navigation bar:</p>
+    <div class="nav-medium nav-small-radius nav-default-color">
+        <ul class="topnav" id="myTopnav8">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+                <div class="dropbtn">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="dropdown-content">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li class="icon" onclick="responsiveNavigation8()"><a href="javascript:void(0);">&#9776;</a></li>
+        </ul>
+    </div>
+    <br>
+    <p class="medium padding-20px">This is medium-radius navigation bar:</p>
+    <div class="nav-medium nav-medium-radius nav-default-color">
+        <ul class="topnav" id="myTopnav9">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+                <div class="dropbtn">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="dropdown-content">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li class="icon" onclick="responsiveNavigation9()"><a href="javascript:void(0);">&#9776;</a></li>
+        </ul>
+    </div>
+    <br>
+    <p class="medium padding-20px">This is big-radius navigation bar:</p>
+    <div class="nav-medium nav-big-radius nav-default-color">
+        <ul class="topnav" id="myTopnav10">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+                <div class="dropbtn">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="dropdown-content">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li class="icon" onclick="responsiveNavigation10()"><a href="javascript:void(0);">&#9776;</a></li>
+        </ul>
+    </div>
+    <br>
+    <p class="medium padding-20px">This is left-aligned navigation bar:</p>
+    <div class="nav-medium nav-default-color">
+        <ul class="topnav" id="myTopnav11">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+                <div class="dropbtn">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="dropdown-content">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li class="icon" onclick="responsiveNavigation11()"><a href="javascript:void(0);">&#9776;</a></li>
+        </ul>
+    </div>
+    <br>
+    <p class="medium padding-20px">This is center-aligned navigation bar:</p>
+    <div class="text-center nav-medium nav-default-color">
+        <ul class="topnav" id="myTopnav12">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+                <div class="dropbtn">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="dropdown-content">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li class="icon" onclick="responsiveNavigation12()"><a href="javascript:void(0);">&#9776;</a></li>
+        </ul>
+    </div>
+    <br>
+    <p class="medium padding-20px">This is right-aligned navigation bar:</p>
+    <div class="text-right nav-medium nav-default-color">
+        <ul class="topnav" id="myTopnav13">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+                <div class="dropbtn">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="dropdown-content">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li class="icon" onclick="responsiveNavigation13()"><a href="javascript:void(0);">&#9776;</a></li>
+        </ul>
+    </div>
+    <br>
+    <p class="medium padding-20px">This is default colors navigation bar:</p>
+    <div class="nav-medium nav-default-color">
+        <ul class="topnav" id="myTopnav14">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+                <div class="dropbtn">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="dropdown-content">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li class="icon" onclick="responsiveNavigation14()"><a href="javascript:void(0);">&#9776;</a></li>
+        </ul>
+    </div>
+    <br>
+    <p class="medium padding-20px">This is customised colors navigation bar:</p>
+    <div class="nav-medium nav-link nav-hover-link active-success nav-font-primary nav-font-hover-error dropdown-warning dropdown-hover-teritary dropdown-font-secondary dropdown-font-hover-success">
+        <ul class="topnav" id="myTopnav15">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+                <div class="dropbtn">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="dropdown-content">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li class="icon" onclick="responsiveNavigation15()"><a href="javascript:void(0);">&#9776;</a></li>
+        </ul>
+    </div>
+    <br>
+    <p class="medium padding-20px">This is sticky navigation bar:</p>
+    <div id="nav-sticky" class="nav-medium nav-default-color">
+        <ul class="topnav" id="myTopnav16">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+                <div class="dropbtn">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="dropdown-content">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li class="icon" onclick="responsiveNavigation16()"><a href="javascript:void(0);">&#9776;</a></li>
+        </ul>
+    </div>
+    <br>
+    <div class= "text-center padding-20px">
+        <br><br><br><br><br><br><br><br><br><br>
+        <p class="medium">You can scroll the page....</p>
+        <br><br><br><br><br><br><br><br><br><br>
+        <p class="medium">...scroll....</p>
+        <br><br><br><br><br><br><br><br><br><br>
+        <p class="medium">...and navigation bar will be sticked to the top of the site.</p>
+        <br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <script src="https://ddeexx3.github.io/UI_Kit/js/navigationBarDemo.js"></script>
 </body>
 </html>
