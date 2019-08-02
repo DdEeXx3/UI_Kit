@@ -10,11 +10,11 @@
 </head>
 <body>
     <div class="text-center nav-medium nav-small-radius nav-default-color">
-        <div class="topnav" id="myTopnav">
-            <a href="#home" class="active">Home</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <div class="dropdown">
+        <ul class="topnav" id="myTopnav">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
                 <div class="dropbtn">Dropdown
                 <i class="fa fa-caret-down"></i>
                 </div>
@@ -23,10 +23,10 @@
                 <a href="#">Link 2</a>
                 <a href="#">Link 3</a>
                 </div>
-            </div> 
-            <a href="#about">About</a>
-            <a href="javascript:void(0);" class="icon" onclick="responsiveNavigation()">&#9776;</a>
-        </div>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="javascript:void(0);" class="icon" onclick="responsiveNavigation()">&#9776;</a></li>
+        </ul>
     </div>
     <div class= "text-center padding-20px">
         <h1>Lorem ipsum</h1>
@@ -83,10 +83,10 @@
     </script>
     <script>
         window.onscroll = function() {stickyNavigation()};
-        
+
         var navbar = document.getElementById("nav-sticky");
         var sticky = navbar.offsetTop;
-        
+
         function stickyNavigation() {
             if (window.pageYOffset >= sticky) {
             navbar.classList.add("sticky")

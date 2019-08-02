@@ -3,28 +3,28 @@ body
     padding: 0px;
 }
 //STYLING BODY OF THE NAVIGATION BAR
-.topnav 
+.topnav
 {
     overflow: hidden;
+    li {
+        display: inline-block;
+        margin: 0;
+    }
 }
-.topnav a 
+.topnav a
 {
-    float: left;
     text-align: center;
     text-decoration: none;
 }
-.topnav .icon 
+.topnav .icon
 {
     display: none;
 }
-.dropdown 
+.dropdown
 {
-    float: left;
-    overflow: hidden;
     cursor: pointer;
-    text-align: center;
 }
-.dropdown .dropbtn 
+.dropdown .dropbtn
 {
     border: none;
     outline: none;
@@ -32,61 +32,61 @@ body
     font-family: inherit;
     margin: 0;
 }
-.dropdown-content 
+.dropdown-content
 {
     display: none;
     position: absolute;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-.dropdown-content a 
+.dropdown-content a
 {
     float: none;
     text-decoration: none;
     display: block;
     text-align: left;
 }
-.dropdown:hover .dropdown-content 
+.dropdown:hover .dropdown-content
 {
     display: block;
 }
 @include small_resolution
 {
-    .topnav a:not(:first-child), .dropdown .dropbtn 
+    .topnav a:not(:first-child), .dropdown .dropbtn
     {
         display: none;
     }
-    .topnav a.icon 
+    .topnav a.icon
     {
         float: right;
         display: block;
     }
 
-    .topnav.responsive 
+    .topnav.responsive
     {
         position: relative;
     }
-    .topnav.responsive a.icon 
+    .topnav.responsive a.icon
     {
         position: absolute;
         right: 0;
         top: 0;
     }
-    .topnav.responsive a 
+    .topnav.responsive a
     {
         float: none;
         display: block;
         text-align: left;
     }
-    .topnav.responsive .dropdown 
+    .topnav.responsive .dropdown
     {
         float: none;
     }
-    .topnav.responsive .dropdown-content 
+    .topnav.responsive .dropdown-content
     {
         position: relative;
     }
-    .topnav.responsive .dropdown .dropbtn 
+    .topnav.responsive .dropdown .dropbtn
     {
         display: block;
         width: 100%;
@@ -114,14 +114,14 @@ body
     }
     .nav-hover-#{$color}
     {
-        .topnav a:hover, .dropdown:hover .dropbtn 
+        .topnav a:hover, .dropdown:hover .dropbtn
         {
             background-color: lighten($colorValue, 10);
         }
     }
     .nav-font-hover-#{$color}
     {
-        .topnav a:hover, .dropdown:hover .dropbtn 
+        .topnav a:hover, .dropdown:hover .dropbtn
         {
             color: $colorValue;
         }
@@ -145,18 +145,18 @@ body
         .dropdown-content a
         {
             color: $colorValue;
-        } 
+        }
     }
     .dropdown-hover-#{$color}
     {
-        .dropdown-content a:hover 
+        .dropdown-content a:hover
         {
             background-color: lighten($colorValue, 10) !important;
         }
     }
     .dropdown-font-hover-#{$color}
     {
-        .dropdown-content a:hover 
+        .dropdown-content a:hover
         {
             color: $colorValue !important;
         }
@@ -170,11 +170,11 @@ body
     {
         background-color: $secondary;
     }
-    .topnav a, .dropdown, .dropbtn, .topnav a:hover, .dropdown:hover .dropbtn 
+    .topnav a, .dropdown, .dropbtn, .topnav a:hover, .dropdown:hover .dropbtn
     {
         color: $primary;
     }
-    .topnav a:hover, .dropdown:hover .dropbtn 
+    .topnav a:hover, .dropdown:hover .dropbtn
     {
         background-color: lighten($secondary, 10);
     }
@@ -190,11 +190,11 @@ body
     {
         color: $secondary;
     }
-    .dropdown-content a:hover 
+    .dropdown-content a:hover
     {
         background-color: lighten($secondary, 10) !important;
     }
-    .dropdown-content a:hover 
+    .dropdown-content a:hover
     {
         color: $primary !important;
     }
@@ -223,13 +223,13 @@ body
             padding: map-get($sizeValues, "paddingV") map-get($sizeValues, "paddingH");
             @include font_sizes2(map-get($sizeValues, "maxFontSize"), map-get($sizeValues, "minFontSize"));
         }
-        .dropdown .dropbtn 
+        .dropdown .dropbtn
         {
             min-width: map-get($sizeValues, "width");
             padding: map-get($sizeValues, "paddingV") map-get($sizeValues, "paddingH");
             @include font_sizes2(map-get($sizeValues, "maxFontSize"), map-get($sizeValues, "minFontSize"));
         }
-        .dropdown-content 
+        .dropdown-content
         {
             min-width: map-get($sizeValues, "widthDropdown");
         }
@@ -240,12 +240,12 @@ body
                 min-width: map-get($sizeValues, "widthTablet");
                 padding: map-get($sizeValues, "paddingV") map-get($sizeValues, "paddingH");
             }
-            .dropdown .dropbtn 
+            .dropdown .dropbtn
             {
                 min-width: map-get($sizeValues, "widthTablet");
                 padding: map-get($sizeValues, "paddingV") map-get($sizeValues, "paddingH");
             }
-            .dropdown-content 
+            .dropdown-content
             {
                 min-width: map-get($sizeValues, "widthDropdownTablet");
             }
