@@ -1,3 +1,7 @@
+body
+{
+    padding: 0px;
+}
 //STYLING BODY OF THE NAVIGATION BAR
 .topnav 
 {
@@ -8,7 +12,6 @@
     float: left;
     text-align: center;
     text-decoration: none;
-    //font-size: 17px;
 }
 .topnav .icon 
 {
@@ -23,7 +26,6 @@
 }
 .dropdown .dropbtn 
 {
-    //font-size: 17px; 
     border: none;
     outline: none;
     background-color: inherit;
@@ -265,4 +267,12 @@
             }
         }
     }
+}
+
+//Classes for fixed and sticky position of navigation bar
+.nav-fixed, .sticky
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
 }

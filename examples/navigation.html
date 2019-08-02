@@ -9,34 +9,90 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="nav-medium nav-small-radius nav-default-color">
-    <div class="topnav" id="myTopnav">
-        <a href="#home" class="active">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <div class="dropdown">
-            <div class="dropbtn">Dropdown
-            <i class="fa fa-caret-down"></i>
-            </div>
-            <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-            </div>
-        </div> 
-        <a href="#about">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    <div class="text-center nav-medium nav-small-radius nav-default-color">
+        <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <div class="dropdown">
+                <div class="dropbtn">Dropdown
+                <i class="fa fa-caret-down"></i>
+                </div>
+                <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+                </div>
+            </div> 
+            <a href="#about">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="responsiveNavigation()">&#9776;</a>
+        </div>
     </div>
+    <div class= "text-center padding-20px">
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h1>Lorem ipsum</h1>
     </div>
     <script>
         /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-        function myFunction() {
+        function responsiveNavigation() {
         var x = document.getElementById("myTopnav");
         if (x.className === "topnav") {
             x.className += " responsive";
         } else {
             x.className = "topnav";
         }
+        }
+    </script>
+    <script>
+        window.onscroll = function() {stickyNavigation()};
+        
+        var navbar = document.getElementById("nav-sticky");
+        var sticky = navbar.offsetTop;
+        
+        function stickyNavigation() {
+            if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+            } else {
+            navbar.classList.remove("sticky");
+            }
         }
     </script>
 </body>
