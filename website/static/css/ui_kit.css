@@ -54499,11 +54499,14 @@ body {
 .active-primary .active {
   background-color: #F6F4F2; }
 
+.active-font-primary .active a {
+  color: #F6F4F2; }
+
 .dropdown-primary .dropdown-content {
   background-color: #F6F4F2; }
 
 .dropdown-font-primary .dropdown-content a {
-  color: #F6F4F2; }
+  color: #F6F4F2 !important; }
 
 .dropdown-hover-primary .dropdown-content li:hover {
   background-color: white !important; }
@@ -54526,11 +54529,14 @@ body {
 .active-secondary .active {
   background-color: #425664; }
 
+.active-font-secondary .active a {
+  color: #425664; }
+
 .dropdown-secondary .dropdown-content {
   background-color: #425664; }
 
 .dropdown-font-secondary .dropdown-content a {
-  color: #425664; }
+  color: #425664 !important; }
 
 .dropdown-hover-secondary .dropdown-content li:hover {
   background-color: #567083 !important; }
@@ -54553,11 +54559,14 @@ body {
 .active-teritary .active {
   background-color: #C6AD8F; }
 
+.active-font-teritary .active a {
+  color: #C6AD8F; }
+
 .dropdown-teritary .dropdown-content {
   background-color: #C6AD8F; }
 
 .dropdown-font-teritary .dropdown-content a {
-  color: #C6AD8F; }
+  color: #C6AD8F !important; }
 
 .dropdown-hover-teritary .dropdown-content li:hover {
   background-color: #d7c6b1 !important; }
@@ -54580,11 +54589,14 @@ body {
 .active-success .active {
   background-color: #3DA557; }
 
+.active-font-success .active a {
+  color: #3DA557; }
+
 .dropdown-success .dropdown-content {
   background-color: #3DA557; }
 
 .dropdown-font-success .dropdown-content a {
-  color: #3DA557; }
+  color: #3DA557 !important; }
 
 .dropdown-hover-success .dropdown-content li:hover {
   background-color: #55c070 !important; }
@@ -54607,11 +54619,14 @@ body {
 .active-error .active {
   background-color: #A83E3E; }
 
+.active-font-error .active a {
+  color: #A83E3E; }
+
 .dropdown-error .dropdown-content {
   background-color: #A83E3E; }
 
 .dropdown-font-error .dropdown-content a {
-  color: #A83E3E; }
+  color: #A83E3E !important; }
 
 .dropdown-hover-error .dropdown-content li:hover {
   background-color: #c15858 !important; }
@@ -54634,11 +54649,14 @@ body {
 .active-warning .active {
   background-color: #E8AA37; }
 
+.active-font-warning .active a {
+  color: #E8AA37; }
+
 .dropdown-warning .dropdown-content {
   background-color: #E8AA37; }
 
 .dropdown-font-warning .dropdown-content a {
-  color: #E8AA37; }
+  color: #E8AA37 !important; }
 
 .dropdown-hover-warning .dropdown-content li:hover {
   background-color: #edbd65 !important; }
@@ -54661,11 +54679,14 @@ body {
 .active-link .active {
   background-color: #0070c9; }
 
+.active-font-link .active a {
+  color: #0070c9; }
+
 .dropdown-link .dropdown-content {
   background-color: #0070c9; }
 
 .dropdown-font-link .dropdown-content a {
-  color: #0070c9; }
+  color: #0070c9 !important; }
 
 .dropdown-hover-link .dropdown-content li:hover {
   background-color: #008cfc !important; }

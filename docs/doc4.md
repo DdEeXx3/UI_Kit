@@ -16,7 +16,7 @@ There are 3 different classes decribing sizes of buttons, which could be used. W
 
 Depending on chosen class, button sizes are specified as below:
 
-|  Class |  Padding top & down |  Padding right & left | Marging top & down  | Font size |
+|  Class name |  Padding top & down |  Padding right & left | Marging top & down  | Font size |
 |:-:|:-:|:-:|:-:|:-:|
 |  button-small | 5px  | 12px  |  5px | 9px - 11px |
 | button-medium  | 10px  | 25px  |  10px | 11px - 16px |

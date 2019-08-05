@@ -89,10 +89,6 @@ body
         width: 100%;
         text-align: left;
     }
-    // .dropdown-content
-    // {
-    //     width: 150%;
-    // }
 }
 //END
 
@@ -155,7 +151,7 @@ body
     {
         .dropdown-content a
         {
-            color: $colorValue;
+            color: $colorValue !important;
         }
     }
     .dropdown-hover-#{$color}
