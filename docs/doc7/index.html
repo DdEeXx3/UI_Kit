@@ -57,7 +57,7 @@
               }
             });
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Navigation Bar</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
-<p>Making responsive navigation bar for your page may be problematic. That's why we created classes to let you do it in seconds. Before you start, you have to learn, how to prepare structure of your menu. You will need 3 files, which are needed to include in your code. First thing you should do, is including those CSS file to your HTML <strong>head</strong> section and JavaScript file at the end of your <strong>body</strong>:</p>
+<p>Making responsive navigation bar for your page may be problematic. That's why we created classes to let you do it in seconds. Before you start, you have to learn, how to prepare structure of your menu. You will need 2 files, which are needed to include in your code. First thing you should do, is including those CSS file to your HTML <strong>head</strong> section and JavaScript file at the end of your <strong>body</strong>:</p>
 <pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
     ...
     <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"</span>&gt;</span>
@@ -72,7 +72,183 @@
 <br>
 First part named <strong>topnav</strong> contains all of the menu options.
 <br>
-If you want any option to have a dropdown menu, this is a second part named <strong>dropdown</strong>. This is separate, nested list containing addidtinal stuff. Default navigation menu may look like this:
+If you want any option to have a dropdown menu, this is a second part named <strong>dropdown</strong>. This is separate, nested list containing addidtinal stuff. Example navigation menu may look like this:
 <br></p>
 <p><img src="https://ddeexx3.github.io/UI_Kit/img/navigationBar1.png" alt="NavigationBar" title="topnav"></p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/UI_Kit/docs/doc6"><span class="arrow-prev">← </span><span>Forms</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/UI_Kit/" class="nav-home"><img src="/UI_Kit/img/favicon.ico" alt="UI Kit" width="66" height="58"/></a><div><h5>Docs</h5><a href="/UI_Kit/docs/doc1.html">Installation</a><a href="/UI_Kit/docs/doc2.html">How To Use</a><a href="/UI_Kit/docs/dictionary1.html">Classes Dictionary</a></div><div><h5>Community</h5><a href="/UI_Kit/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/UI_Kit/blog">Blog</a><a href="https://github.com/DdEeXx3/UI_Kit">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/UI_Kit/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Softjourn Polska</section></footer></div></body></html>
+<p>Of course, dropdown part is optional and may be added to every menu option.
+<br></p>
+<p>Your navigation bar HTML code should look exactly like this below:</p>
+<pre><code class="hljs css language-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">"X-UA-Compatible"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"ie=edge"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Document<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://ddeexx3.github.io/UI_Kit/css/ui_kit.css"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- LINK TO CSS FILE CONTAINING ICONS USED IN NAVIGATION BAR --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- IN THIS DIV YOU WILL ADD ALL OF OUR STYLING CLASSES --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+         <span class="hljs-comment">&lt;!-- UNORDERED LIST WITH CLASS "topnav" CONTAINING ALL OF THE MENU OPTIONS" --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"topnav"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"myTopnav"</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- ANY OPTION OF MENU WITH LINK TO ANOTHER PAGE (CLASS "active" WILL BE DESCRIBED LATER) --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#home"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#news"</span>&gt;</span>News<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#contact"</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- OPTION with class "dropdown" CONTAINING DROPDOWN MENU WITH ADDITIONAL OPTIONS --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropbtn"</span>&gt;</span>Dropdown
+                    <span class="hljs-comment">&lt;!-- ICON SHOWING THIS OPTION IS DROPDOWN MENU --&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fa fa-caret-down"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-comment">&lt;!-- NESTED LIST CONTAINING OPTIONS OF DROPDOWN MENU --&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-content"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 3<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#about"</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- ELEMENT WITH ICON FOR RESPONSIVE NAVIGATION BAR - IT ALWAYS MUST BE ADDED AS LAST OPTION OF THE MENU --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"responsiveNavigation()"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"javascript:void(0);"</span>&gt;</span>&amp;#9776;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- LINK TO SCRIPT NEEDED FOR PROPER WORK OF RESPONSIVE NAVIGATION BAR --&gt;</span>     
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://ddeexx3.github.io/UI_Kit/js/navigationBar.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>As you can see above, there are some classes and elements that you have to contain to your navigation bar, if you want it to work properly:</p>
+<ul>
+<li>whole navigation bar should be packed in <strong>div element</strong>, where you can add our styling classes,</li>
+<li><strong>ul</strong> element, beeing main part of your navigation bar, must contain <strong>class=&quot;topnav&quot;</strong> and <strong>id=&quot;myTopnav&quot;</strong>,</li>
+<li>if you want any option of your navigation bar to have dropdown menu, you have to add <strong>class=&quot;dropdown&quot;</strong> to it with all of the stuff (<strong>important thing is to add classes: &quot;dropdown&quot;, &quot;fa&quot;, &quot;fa-caret-down&quot;, &quot;dropdown-content&quot; in proper place</strong>):</li>
+</ul>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropbtn"</span>&gt;</span>Dropdown
+        <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fa fa-caret-down"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-content"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 3<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+</code></pre>
+<ul>
+<li>in the end of the navigation bar code, you should add element responsible for navigation menu responisvity:</li>
+</ul>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    ...
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"responsiveNavigation()"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"javascript:void(0);"</span>&gt;</span>&amp;#9776;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<ul>
+<li>adding <strong>class=&quot;active&quot;</strong> to any menu option lets you see how it looks, when window with this option is active on your site. You can later add some JavaScript code adding class=&quot;active&quot; to any option which is opened at the moment. In our examples, we added class=&quot;active&quot; to the first menu option.
+<br></li>
+</ul>
+<p>If you have your navigation bar structure prepared, it should now look like this:</p>
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="result" data-user="ddeexx3" data-slug-hash="VoryPj" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="NavigationBar example 1">
+  <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/VoryPj/">
+  NavigationBar example 1</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<h2><a class="anchor" aria-hidden="true" id="size"></a><a href="#size" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Size</h2>
+<p>First group of classes is responsible for size and appearance of your navigation bar. This class look like below:</p>
+<pre><code class="hljs css language-sass">.nav-$<span class="hljs-built_in">size</span>
+</code></pre>
+<p>Where:</p>
+<ul>
+<li>$size - size of your navigation bar. You can replace $size with values: <strong>the-smallest</strong>, <strong>small</strong>, <strong>medium-small</strong>, <strong>medium</strong>, <strong>big</strong> and <strong>the-biggest</strong>.
+<br></li>
+</ul>
+<p>We prepared 6, fully responsive sizes of menu. Differences between them are shown in table below:</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Class name</th><th style="text-align:center">Minimal width of menu option on desktop screen</th><th style="text-align:center">Minimal width of menu option on tablet screen</th><th style="text-align:center">Minimal width of dropdown menu (on every screen)</th><th style="text-align:center">Padding top &amp; bottom</th><th style="text-align:center">Padding right &amp; left</th><th style="text-align:center">Font size</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">nav-the-smallest</td><td style="text-align:center">30px</td><td style="text-align:center">20px</td><td style="text-align:center">100px</td><td style="text-align:center">14px</td><td style="text-align:center">12px</td><td style="text-align:center">9px - 11px</td></tr>
+<tr><td style="text-align:center">nav-small</td><td style="text-align:center">60px</td><td style="text-align:center">40px</td><td style="text-align:center">125px</td><td style="text-align:center">14px</td><td style="text-align:center">16px</td><td style="text-align:center">11px - 14px</td></tr>
+<tr><td style="text-align:center">nav-medium-small</td><td style="text-align:center">90px</td><td style="text-align:center">60px</td><td style="text-align:center">185px</td><td style="text-align:center">18px</td><td style="text-align:center">20px</td><td style="text-align:center">14px - 16px</td></tr>
+<tr><td style="text-align:center">nav-medium</td><td style="text-align:center">120px</td><td style="text-align:center">80px</td><td style="text-align:center">240px</td><td style="text-align:center">22px</td><td style="text-align:center">24px</td><td style="text-align:center">16px - 20px</td></tr>
+<tr><td style="text-align:center">nav-big</td><td style="text-align:center">150px</td><td style="text-align:center">100px</td><td style="text-align:center">295px</td><td style="text-align:center">26px</td><td style="text-align:center">28px</td><td style="text-align:center">20px - 24px</td></tr>
+<tr><td style="text-align:center">nav-the-biggest</td><td style="text-align:center">180px</td><td style="text-align:center">120px</td><td style="text-align:center">355px</td><td style="text-align:center">30px</td><td style="text-align:center">32px</td><td style="text-align:center">24px - 28px</td></tr>
+</tbody>
+</table>
+<p>In example below, we set to our div class &quot;nav-medium&quot;. If you want to see other sizes, you can simply edit the code with adding rest of the classes.</p>
+<pre><code class="hljs css language-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">"X-UA-Compatible"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"ie=edge"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Document<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://ddeexx3.github.io/UI_Kit/css/ui_kit.css"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-medium"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"topnav"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"myTopnav"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#home"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#news"</span>&gt;</span>News<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#contact"</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropbtn"</span>&gt;</span>Dropdown
+                    <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fa fa-caret-down"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-content"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 3<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#about"</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"responsiveNavigation()"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"javascript:void(0);"</span>&gt;</span>&amp;#9776;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://ddeexx3.github.io/UI_Kit/js/navigationBar.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>See effect of executed code:</p>
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="result" data-user="ddeexx3" data-slug-hash="RXjJdE" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="NavigationBar example 2">
+  <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/RXjJdE/">
+  NavigationBar example 2</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<h2><a class="anchor" aria-hidden="true" id="colors"></a><a href="#colors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Colors</h2>
+<p>Let's move to colors of your navigation bar. You can set them in 2 ways:</p>
+<ul>
+<li>very fast by adding only one class to your div and setting colors by deafult,</li>
+<li>longer by adding 10 classes to your div, but styling every element of your navigation bar separately.
+<br></li>
+</ul>
+<p>We will start from the second method. We created 10 different classes to style every element of your navigation bar. You should remember, that if you decided to use this method, you are required to contain all of 10 classes in your navigation bar! Otherway, colors may not display properly.
+<br></p>
+<p>All of the classes use <strong>$color</strong> variable. To remember it, <a href="doc2#links">come back to typography section &gt;</a>.</p>
+<p>You can see all of the color classes in table below:</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Class name</th><th style="text-align:center">Desctription</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">nav-$color</td><td style="text-align:center">Sets background color of navigation bar</td></tr>
+<tr><td style="text-align:center">nav-font-$color</td><td style="text-align:center">Sets font color of navigation bar</td></tr>
+<tr><td style="text-align:center">active-$color</td><td style="text-align:center">Sets background color of active menu option</td></tr>
+<tr><td style="text-align:center">active-font-$color</td><td style="text-align:center">Sets font color of active menu option</td></tr>
+<tr><td style="text-align:center">nav-hover-$color</td><td style="text-align:center">Sets background color of navigation bar when you mouse over it</td></tr>
+<tr><td style="text-align:center">nav-font-hover-$color</td><td style="text-align:center">Sets font color of navigation bar when you mouse over it</td></tr>
+<tr><td style="text-align:center">dropdown-$color</td><td style="text-align:center">Sets background color of dropdown menu</td></tr>
+<tr><td style="text-align:center">dropdown-font-$color</td><td style="text-align:center">Sets font color of dropdown menu</td></tr>
+<tr><td style="text-align:center">dropdown-hover-$color</td><td style="text-align:center">Sets background color of dropdown menu when you mouse over it</td></tr>
+<tr><td style="text-align:center">dropdown-font-hover-$color</td><td style="text-align:center">Sets font color of dropdown menu when you mouse over it</td></tr>
+</tbody>
+</table>
+<p><img src="https://ddeexx3.github.io/UI_Kit/img/navigationBar2.png" alt="NavigationBar2" title="topnav2"></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/UI_Kit/docs/doc6"><span class="arrow-prev">← </span><span>Forms</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#size">Size</a></li><li><a href="#colors">Colors</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/UI_Kit/" class="nav-home"><img src="/UI_Kit/img/favicon.ico" alt="UI Kit" width="66" height="58"/></a><div><h5>Docs</h5><a href="/UI_Kit/docs/doc1.html">Installation</a><a href="/UI_Kit/docs/doc2.html">How To Use</a><a href="/UI_Kit/docs/dictionary1.html">Classes Dictionary</a></div><div><h5>Community</h5><a href="/UI_Kit/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/UI_Kit/blog">Blog</a><a href="https://github.com/DdEeXx3/UI_Kit">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/UI_Kit/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Softjourn Polska</section></footer></div></body></html>
