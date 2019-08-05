@@ -137,6 +137,13 @@ body
             background-color: $colorValue;
         }
     }
+    .active-font-#{$color}
+    {
+        .active a
+        {
+            color: $colorValue;
+        }
+    }
     .dropdown-#{$color}
     {
         .dropdown-content
