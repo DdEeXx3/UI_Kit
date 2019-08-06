@@ -465,6 +465,78 @@ As you can see there is an exception. Till now, we've always added classes to ou
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+## Logo space
+When it comes to navigation bar, there is often a situation that you want to place your logo iniside it. You can use our classes to do that.
+### Squared logo
+You have much less work to do, if your logo is squared. For this situation, we created classes that fits automatically to your navigation bar. You can use class:
+```sass
+.nav-logo-$side-$size
+```
+Where:
+<br>
+
+- $side - side of navigation bar to which your logo will be aligned. You can replace $side with __right__ and __left__.
+- $size - size of navigation bar to which you want to add your logo. You can replace $size with __the-smallest__, __small__, __medium-small__, __small__, __medium__, __big__ and __the-biggest__.
+
+Sizes of logos, according to class are shown in table below:
+
+|  $size value |  Logo width (icon font size) on desktop screen | Margin on desktop screen  | Logo width (icon font size) on tablet screen  | Margin on tablet screen  | Logo width (icon font size) on mobile screen  | Margin on mobile screen  |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| the-smallest  | 26px  | 8px  | 24px  |  7.5px | 24px  | 7.5px  |
+| small  | 28px  | 9px  | 26px  |  8px | 26px  |  8px |
+| medium-small  |  36px |  10px |  34px |  10px |  28px |  9px |
+|  medium |  44px |  13px | 40px  | 12px  | 30px  | 9px  |
+| big  | 51px  | 16px  | 48px  | 15px  | 32px  | 11px  |
+|  the-biggest |  60px | 18px  | 57px  |  17px | 37px  |  11px |
+
+As we said before, to use this class, your logo __must be squared__ (it means it must have the same width and height). Second important thing is to know, where to place your "img" file inside navigation bar (it may be also icon - "i" HTML element). You __always should add it at the end of the navigation bar content__:
+```html
+<ul class="topnav" id="myTopnav">
+    ...
+    <li class="icon" onclick="responsiveNavigation()"><a href="javascript:void(0);">&#9776;</a></li>
+    <!--YOU PLACE YOUR LOGO(S) HERE, E.G.: -->
+    <img class="nav-logo-left-medium-small" src="https://ddeexx3.github.io/UI_Kit/img/appleLogo.png">
+    <i class="fa fa-facebook-square nav-logo-right-medium-small input-font-primary"></i>
+    <i class="fa fa-instagram nav-logo-right-medium-small input-font-primary"></i> 
+</ul>
+```
+Look at this two examples with using that class:
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="result" data-user="ddeexx3" data-slug-hash="vopVQj" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="NavigationBar example 10">
+  <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/vopVQj/">
+  NavigationBar example 10</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="result" data-user="ddeexx3" data-slug-hash="rXpqRM" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="NavigationBar example 11">
+  <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/rXpqRM/">
+  NavigationBar example 11</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+### Other logo
+When your logo isn't squared you have a little bit more work to do. We were not able to create class making responsive logo for every size and shape. In this situation you should use class:
+```sass
+.nav-logo-$side
+```
+Where:
+<br>
+
+- $side - side of navigation bar to which your logo will be aligned. You can replace $side with __right__ and __left__.
+<br>
+
+As you can see above, this class is limited to logo align. Size of it, you have to define on your own. Of course you can use for that all of our width, height, margin and padding classes. To see more information [go to Grid Layout section >](doc3#paddings-margins-width-and-height-sizes)
+<br>
+After few minutes of work with that classes, you can reach satisfying effect too:
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="result" data-user="ddeexx3" data-slug-hash="XvVorB" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="NavigationBar example 12">
+  <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/XvVorB/">
+  NavigationBar example 12</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 <br>
 
 [See demo page showing navigation bar styles >](/UI_Kit/navigationDemo.html)

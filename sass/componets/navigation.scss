@@ -288,3 +288,34 @@ body
     top: 0;
     width: 100%;
 }
+
+//Classes for logo inside navigation bar
+@each $side in (right, left)
+{
+    .nav-logo-#{$side}
+    {
+        float: #{$side};
+    }
+    @each $size, $sizeValues in $navigationLogoSizes
+    {
+        .nav-logo-#{$side}-#{$size}
+        {
+            float: #{$side};
+            width: map-get($sizeValues, "widthDesktop");
+            margin: map-get($sizeValues, "marginDesktop");
+            font-size: map-get($sizeValues, "widthDesktop") !important;
+            @include medium_resolution
+            {
+                width: map-get($sizeValues, "widthTablet");
+                margin: map-get($sizeValues, "marginTablet");
+                font-size: map-get($sizeValues, "widthTablet") !important;
+            }
+            @include small_resolution
+            {
+                width: map-get($sizeValues, "widthMobile");
+                margin: map-get($sizeValues, "marginMobile");
+                font-size: map-get($sizeValues, "widthMobile") !important;
+            }
+        }
+    }
+}

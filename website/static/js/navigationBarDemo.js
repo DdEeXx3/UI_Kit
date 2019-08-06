@@ -190,6 +190,31 @@ function responsiveNavigation16()
         x.className = "topnav";
     }
 }
+function responsiveNavigation17() 
+{
+    var x = document.getElementById("myTopnav17");
+    if (x.className === "topnav") 
+    {
+        x.className += " responsive";
+    } 
+    else 
+    {
+        x.className = "topnav";
+    }
+}
+function responsiveNavigation18() 
+{
+    var x = document.getElementById("myTopnav18");
+    if (x.className === "topnav") 
+    {
+        x.className += " responsive";
+    } 
+    else 
+    {
+        x.className = "topnav";
+    }
+}
+
 window.onscroll = function() {stickyNavigation()};
         
 var navbar = document.getElementById("nav-sticky");
