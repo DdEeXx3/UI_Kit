@@ -502,15 +502,61 @@ If you want any option to have a dropdown menu, this is a second part named <str
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-<br>
-<p><a href="/UI_Kit/navigationDemo.html">See demo page showing navigation bar styles &gt;</a></p>
 <h2><a class="anchor" aria-hidden="true" id="logo-space"></a><a href="#logo-space" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Logo space</h2>
-<p>When it comes to navigation bar, there is often a situation that you want to place your logo iniside it. You can use our classes to to that:</p>
-<pre><code class="hljs css language-sass"><span class="hljs-title">.nav-logo-$side</span>
+<p>When it comes to navigation bar, there is often a situation that you want to place your logo iniside it. You can use our classes to do that.</p>
+<h3><a class="anchor" aria-hidden="true" id="squared-logo"></a><a href="#squared-logo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Squared logo</h3>
+<p>You have much less work to do, if your logo is squared. For this situation, we created classes that fits automatically to your navigation bar. You can use class:</p>
+<pre><code class="hljs css language-sass">.nav-logo-$side-$size
 </code></pre>
 <p>Where:
 <br></p>
 <ul>
 <li>$side - side of navigation bar to which your logo will be aligned. You can replace $side with <strong>right</strong> and <strong>left</strong>.</li>
+<li>$size - size of navigation bar to which you want to add your logo. You can replace $size with <strong>the-smallest</strong>, <strong>small</strong>, <strong>medium-small</strong>, <strong>small</strong>, <strong>medium</strong>, <strong>big</strong> and <strong>the-biggest</strong>.</li>
 </ul>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/UI_Kit/docs/doc6"><span class="arrow-prev">← </span><span>Forms</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#size">Size</a></li><li><a href="#colors">Colors</a><ul class="toc-headings"><li><a href="#color-of-every-element">Color of every element</a></li><li><a href="#default-color">Default color</a></li></ul></li><li><a href="#radius-level">Radius level</a></li><li><a href="#menu-options-align">Menu options align</a></li><li><a href="#visibility">Visibility</a></li><li><a href="#logo-space">Logo space</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/UI_Kit/" class="nav-home"><img src="/UI_Kit/img/favicon.ico" alt="UI Kit" width="66" height="58"/></a><div><h5>Docs</h5><a href="/UI_Kit/docs/doc1.html">Installation</a><a href="/UI_Kit/docs/doc2.html">How To Use</a><a href="/UI_Kit/docs/dictionary1.html">Classes Dictionary</a></div><div><h5>Community</h5><a href="/UI_Kit/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/UI_Kit/blog">Blog</a><a href="https://github.com/DdEeXx3/UI_Kit">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/UI_Kit/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Softjourn Polska</section></footer></div></body></html>
+<p>As we said before, to use this class, your logo <strong>must be squared</strong> (it means it must have the same width and height). Second important thing is to know, where to place your &quot;img&quot; file inside navigation bar (it may be also icon - &quot;i&quot; HTML element). You <strong>always should add it at the end of the navigation bar content</strong>:</p>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"topnav"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"myTopnav"</span>&gt;</span>
+    ...
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"responsiveNavigation()"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"javascript:void(0);"</span>&gt;</span>&amp;#9776;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--YOU PLACE YOUR LOGO(S) HERE, E.G.: --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-logo-left-medium-small"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://ddeexx3.github.io/UI_Kit/img/appleLogo.png"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fa fa-facebook-square nav-logo-right-medium-small input-font-primary"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fa fa-instagram nav-logo-right-medium-small input-font-primary"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> 
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<p>Look at this two examples with using that class:</p>
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="result" data-user="ddeexx3" data-slug-hash="vopVQj" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="NavigationBar example 10">
+  <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/vopVQj/">
+  NavigationBar example 10</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<br>
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="result" data-user="ddeexx3" data-slug-hash="rXpqRM" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="NavigationBar example 11">
+  <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/rXpqRM/">
+  NavigationBar example 11</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<h3><a class="anchor" aria-hidden="true" id="other-logo"></a><a href="#other-logo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Other logo</h3>
+<p>When your logo isn't squared you have a little bit more work to do. We were not able to create class making responsive logo for every size and shape. In this situation you should use class:</p>
+<pre><code class="hljs css language-sass"><span class="hljs-title">.nav-logo-$side</span>
+</code></pre>
+<p>Where:
+<br></p>
+<ul>
+<li>$side - side of navigation bar to which your logo will be aligned. You can replace $side with <strong>right</strong> and <strong>left</strong>.
+<br></li>
+</ul>
+<p>As you can see above, this class is limited to logo align. Size of it, you have to define on your own. Of course you can use for that all of our width, height, margin and padding classes. To see more information <a href="doc3#paddings-margins-width-and-height-sizes">go to Grid Layout section &gt;</a>
+<br>
+After few minutes of work with that classes, you can reach satisfying effect too:</p>
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="result" data-user="ddeexx3" data-slug-hash="XvVorB" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="NavigationBar example 12">
+  <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/XvVorB/">
+  NavigationBar example 12</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<br>
+<p><a href="/UI_Kit/navigationDemo.html">See demo page showing navigation bar styles &gt;</a></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/UI_Kit/docs/doc6"><span class="arrow-prev">← </span><span>Forms</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#size">Size</a></li><li><a href="#colors">Colors</a><ul class="toc-headings"><li><a href="#color-of-every-element">Color of every element</a></li><li><a href="#default-color">Default color</a></li></ul></li><li><a href="#radius-level">Radius level</a></li><li><a href="#menu-options-align">Menu options align</a></li><li><a href="#visibility">Visibility</a></li><li><a href="#logo-space">Logo space</a><ul class="toc-headings"><li><a href="#squared-logo">Squared logo</a></li><li><a href="#other-logo">Other logo</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/UI_Kit/" class="nav-home"><img src="/UI_Kit/img/favicon.ico" alt="UI Kit" width="66" height="58"/></a><div><h5>Docs</h5><a href="/UI_Kit/docs/doc1.html">Installation</a><a href="/UI_Kit/docs/doc2.html">How To Use</a><a href="/UI_Kit/docs/dictionary1.html">Classes Dictionary</a></div><div><h5>Community</h5><a href="/UI_Kit/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/UI_Kit/blog">Blog</a><a href="https://github.com/DdEeXx3/UI_Kit">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/UI_Kit/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Softjourn Polska</section></footer></div></body></html>
