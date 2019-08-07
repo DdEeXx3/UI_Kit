@@ -53,7 +53,7 @@ Your navigation bar HTML code should look exactly like this below:
             <li><a href="#news">News</a></li>
             <li><a href="#contact">Contact</a></li>
             <!-- OPTION with class "dropdown" CONTAINING DROPDOWN MENU WITH ADDITIONAL OPTIONS -->
-            <li class="dropdown">
+            <li onclick="dropdownMenu(event)" class="dropdown">
                 <div class="dropbtn">Dropdown
                     <!-- ICON SHOWING THIS OPTION IS DROPDOWN MENU -->
                     <i class="fa fa-caret-down"></i>
@@ -78,9 +78,9 @@ Your navigation bar HTML code should look exactly like this below:
 As you can see above, there are some classes and elements that you have to contain to your navigation bar, if you want it to work properly:
 - whole navigation bar should be packed in __div element__, where you can add our styling classes,
 - __ul__ element, beeing main part of your navigation bar, must contain __class="topnav"__ and __id="myTopnav"__,
-- if you want any option of your navigation bar to have dropdown menu, you have to add __class="dropdown"__ to it with all of the stuff (__important thing is to add classes: "dropdown", "fa", "fa-caret-down", "dropdown-content" in proper place__):
+- if you want any option of your navigation bar to have dropdown menu, you have to add __class="dropdown"__ to it with all of the stuff (__important thing is to add classes: "dropdown", "fa", "fa-caret-down", "dropdown-content" and also add onclick="dropdownMenu(event)" function in proper place__):
 ```html 
-<li class="dropdown">
+<li onclick="dropdownMenu(event)" class="dropdown">
     <div class="dropbtn">Dropdown
         <i class="fa fa-caret-down"></i>
     </div>
@@ -153,7 +153,7 @@ In example below, we set to our div class "nav-medium". If you want to see other
             <li class="active"><a href="#home">Home</a></li>
             <li><a href="#news">News</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
+            <li onclick="dropdownMenu(event)" class="dropdown">
                 <div class="dropbtn">Dropdown
                     <i class="fa fa-caret-down"></i>
                 </div>
@@ -229,7 +229,7 @@ We set hover color values to be 10% lighten than themselves. That's why you can 
             <li class="active"><a href="#home">Home</a></li>
             <li><a href="#news">News</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
+            <li onclick="dropdownMenu(event)" class="dropdown">
                 <div class="dropbtn">Dropdown
                     <i class="fa fa-caret-down"></i>
                 </div>
@@ -291,7 +291,7 @@ There is no posibility to set every element's color, it's done by default theme 
             <li class="active"><a href="#home">Home</a></li>
             <li><a href="#news">News</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
+            <li onclick="dropdownMenu(event)" class="dropdown">
                 <div class="dropbtn">Dropdown
                     <i class="fa fa-caret-down"></i>
                 </div>
@@ -346,7 +346,7 @@ In the example, we set radius to "medium" value. You can easily change it, by ad
             <li class="active"><a href="#home">Home</a></li>
             <li><a href="#news">News</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
+            <li onclick="dropdownMenu(event)" class="dropdown">
                 <div class="dropbtn">Dropdown
                     <i class="fa fa-caret-down"></i>
                 </div>
@@ -401,7 +401,7 @@ In the example, we set navigation bar to be center-aligned.
             <li class="active"><a href="#home">Home</a></li>
             <li><a href="#news">News</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
+            <li onclick="dropdownMenu(event)" class="dropdown">
                 <div class="dropbtn">Dropdown
                     <i class="fa fa-caret-down"></i>
                 </div>
