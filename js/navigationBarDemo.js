@@ -216,10 +216,10 @@ function responsiveNavigation18()
 }
 function dropdownMenu(event)
 {
-    x = event.path;
+    var x = event.path;
     for (i=0; i<x.length; i++)
     {
-        y = x[i].lastElementChild;
+        var y = x[i].lastElementChild;
         if (typeof y != "undefined" && y.className == "dropdown-content")
         {
             if (y.style.display == "")
