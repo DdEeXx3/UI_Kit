@@ -217,7 +217,6 @@ function responsiveNavigation18()
 function dropdownMenu(event)
 {
     x = event.path;
-    console.log(x);
     for (i=0; i<x.length; i++)
     {
         y = x[i].lastElementChild;
