@@ -214,6 +214,26 @@ function responsiveNavigation18()
         x.className = "topnav";
     }
 }
+function dropdownMenu(event)
+{
+    x = event.path;
+    console.log(x);
+    for (i=0; i<x.length; i++)
+    {
+        y = x[i].lastElementChild;
+        if (typeof y != "undefined" && y.className == "dropdown-content")
+        {
+            if (y.style.display == "")
+            {
+                y.style.display = "block";
+            }
+            else
+            {
+                y.style.display = "";
+            }
+        }
+    }
+}
 
 window.onscroll = function() {stickyNavigation()};
         
