@@ -54460,7 +54460,7 @@ body {
   display: block; }
 
 @media (max-width: 735px) {
-  .topnav li:not(:first-child), .dropdown .dropbtn {
+  .topnav li:not(.active), .dropdown .dropbtn {
     display: none; }
   .topnav li.icon {
     float: right;
