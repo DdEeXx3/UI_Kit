@@ -111,7 +111,7 @@ body
     }
     .nav-hover-#{$color}
     {
-        .topnav li:hover, .dropdown:hover .dropbtn
+        .topnav li:hover:not(.active), .dropdown:hover .dropbtn
         {
             background-color: lighten($colorValue, 10);
         }
@@ -184,7 +184,7 @@ body
     {
         color: $primary;
     }
-    .topnav li:hover, .dropdown:hover .dropbtn
+    .topnav li:hover:not(.active), .dropdown:hover .dropbtn
     {
         background-color: lighten($secondary, 10);
     }

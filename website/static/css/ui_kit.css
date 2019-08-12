@@ -54490,7 +54490,7 @@ body {
 .nav-font-primary .topnav a, .nav-font-primary .dropdown, .nav-font-primary .dropbtn {
   color: #F6F4F2; }
 
-.nav-hover-primary .topnav li:hover, .nav-hover-primary .dropdown:hover .dropbtn {
+.nav-hover-primary .topnav li:hover:not(.active), .nav-hover-primary .dropdown:hover .dropbtn {
   background-color: white; }
 
 .nav-font-hover-primary .topnav li:hover a, .nav-font-hover-primary .topnav li:hover .dropdown, .nav-font-hover-primary .topnav li:hover .dropbtn, .nav-font-hover-primary .dropdown:hover .dropbtn a, .nav-font-hover-primary .dropdown:hover .dropbtn .dropdown, .nav-font-hover-primary .dropdown:hover .dropbtn .dropbtn {
@@ -54520,7 +54520,7 @@ body {
 .nav-font-secondary .topnav a, .nav-font-secondary .dropdown, .nav-font-secondary .dropbtn {
   color: #425664; }
 
-.nav-hover-secondary .topnav li:hover, .nav-hover-secondary .dropdown:hover .dropbtn {
+.nav-hover-secondary .topnav li:hover:not(.active), .nav-hover-secondary .dropdown:hover .dropbtn {
   background-color: #567083; }
 
 .nav-font-hover-secondary .topnav li:hover a, .nav-font-hover-secondary .topnav li:hover .dropdown, .nav-font-hover-secondary .topnav li:hover .dropbtn, .nav-font-hover-secondary .dropdown:hover .dropbtn a, .nav-font-hover-secondary .dropdown:hover .dropbtn .dropdown, .nav-font-hover-secondary .dropdown:hover .dropbtn .dropbtn {
@@ -54550,7 +54550,7 @@ body {
 .nav-font-teritary .topnav a, .nav-font-teritary .dropdown, .nav-font-teritary .dropbtn {
   color: #C6AD8F; }
 
-.nav-hover-teritary .topnav li:hover, .nav-hover-teritary .dropdown:hover .dropbtn {
+.nav-hover-teritary .topnav li:hover:not(.active), .nav-hover-teritary .dropdown:hover .dropbtn {
   background-color: #d7c6b1; }
 
 .nav-font-hover-teritary .topnav li:hover a, .nav-font-hover-teritary .topnav li:hover .dropdown, .nav-font-hover-teritary .topnav li:hover .dropbtn, .nav-font-hover-teritary .dropdown:hover .dropbtn a, .nav-font-hover-teritary .dropdown:hover .dropbtn .dropdown, .nav-font-hover-teritary .dropdown:hover .dropbtn .dropbtn {
@@ -54580,7 +54580,7 @@ body {
 .nav-font-success .topnav a, .nav-font-success .dropdown, .nav-font-success .dropbtn {
   color: #3DA557; }
 
-.nav-hover-success .topnav li:hover, .nav-hover-success .dropdown:hover .dropbtn {
+.nav-hover-success .topnav li:hover:not(.active), .nav-hover-success .dropdown:hover .dropbtn {
   background-color: #55c070; }
 
 .nav-font-hover-success .topnav li:hover a, .nav-font-hover-success .topnav li:hover .dropdown, .nav-font-hover-success .topnav li:hover .dropbtn, .nav-font-hover-success .dropdown:hover .dropbtn a, .nav-font-hover-success .dropdown:hover .dropbtn .dropdown, .nav-font-hover-success .dropdown:hover .dropbtn .dropbtn {
@@ -54610,7 +54610,7 @@ body {
 .nav-font-error .topnav a, .nav-font-error .dropdown, .nav-font-error .dropbtn {
   color: #A83E3E; }
 
-.nav-hover-error .topnav li:hover, .nav-hover-error .dropdown:hover .dropbtn {
+.nav-hover-error .topnav li:hover:not(.active), .nav-hover-error .dropdown:hover .dropbtn {
   background-color: #c15858; }
 
 .nav-font-hover-error .topnav li:hover a, .nav-font-hover-error .topnav li:hover .dropdown, .nav-font-hover-error .topnav li:hover .dropbtn, .nav-font-hover-error .dropdown:hover .dropbtn a, .nav-font-hover-error .dropdown:hover .dropbtn .dropdown, .nav-font-hover-error .dropdown:hover .dropbtn .dropbtn {
@@ -54640,7 +54640,7 @@ body {
 .nav-font-warning .topnav a, .nav-font-warning .dropdown, .nav-font-warning .dropbtn {
   color: #E8AA37; }
 
-.nav-hover-warning .topnav li:hover, .nav-hover-warning .dropdown:hover .dropbtn {
+.nav-hover-warning .topnav li:hover:not(.active), .nav-hover-warning .dropdown:hover .dropbtn {
   background-color: #edbd65; }
 
 .nav-font-hover-warning .topnav li:hover a, .nav-font-hover-warning .topnav li:hover .dropdown, .nav-font-hover-warning .topnav li:hover .dropbtn, .nav-font-hover-warning .dropdown:hover .dropbtn a, .nav-font-hover-warning .dropdown:hover .dropbtn .dropdown, .nav-font-hover-warning .dropdown:hover .dropbtn .dropbtn {
@@ -54670,7 +54670,7 @@ body {
 .nav-font-link .topnav a, .nav-font-link .dropdown, .nav-font-link .dropbtn {
   color: #0070c9; }
 
-.nav-hover-link .topnav li:hover, .nav-hover-link .dropdown:hover .dropbtn {
+.nav-hover-link .topnav li:hover:not(.active), .nav-hover-link .dropdown:hover .dropbtn {
   background-color: #008cfc; }
 
 .nav-font-hover-link .topnav li:hover a, .nav-font-hover-link .topnav li:hover .dropdown, .nav-font-hover-link .topnav li:hover .dropbtn, .nav-font-hover-link .dropdown:hover .dropbtn a, .nav-font-hover-link .dropdown:hover .dropbtn .dropdown, .nav-font-hover-link .dropdown:hover .dropbtn .dropbtn {
@@ -54700,7 +54700,7 @@ body {
 .nav-default-color .topnav a, .nav-default-color .dropdown, .nav-default-color .dropbtn, .nav-default-color .topnav a:hover, .nav-default-color .dropdown:hover .dropbtn {
   color: #F6F4F2; }
 
-.nav-default-color .topnav li:hover, .nav-default-color .dropdown:hover .dropbtn {
+.nav-default-color .topnav li:hover:not(.active), .nav-default-color .dropdown:hover .dropbtn {
   background-color: #567083; }
 
 .nav-default-color .active {
