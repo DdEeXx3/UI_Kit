@@ -23,6 +23,9 @@
       "dictionary6": {
         "title": "Forms"
       },
+      "dictionary7": {
+        "title": "Navigation bar"
+      },
       "doc1": {
         "title": "Setting Up",
         "sidebar_label": "Installation"
@@ -41,6 +44,9 @@
       },
       "doc6": {
         "title": "Forms"
+      },
+      "doc7": {
+        "title": "Navigation Bar"
       }
     },
     "links": {

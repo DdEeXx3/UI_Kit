@@ -7,7 +7,7 @@ title: Grid Layout
 
 Next thing we made are classes describing position of the elements on your page. We used for this CSS Grid. We divided area of any div for 12 equal columns. This makes you have unlimited positioning of elements in your page:
 
-![Grid CSS](https://i.ibb.co/j3pX25g/Zrzut-ekranu-2019-07-12-o-14-43-40.png "Grid")
+![Grid CSS](https://ddeexx3.github.io/UI_Kit/img/gridLayout1.png "Grid")
 
 ## Preparation
 
@@ -48,7 +48,7 @@ For example:
 \
 class "col-sm-4" means that div is 4 of 12 columns width on mobile screens.
 
-![Grid Div](https://i.ibb.co/d5fV3rn/Zrzut-ekranu-2019-07-12-o-15-45-43.png "Grid Divs")
+![Grid Div](https://ddeexx3.github.io/UI_Kit/img/gridLayout2.png "Grid Divs")
 
 ## How to use them
 

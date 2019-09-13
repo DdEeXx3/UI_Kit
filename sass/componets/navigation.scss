@@ -1,0 +1,321 @@
+body
+{
+    padding: 0px;
+}
+//STYLING BODY OF THE NAVIGATION BAR
+.topnav
+{
+    overflow: hidden;
+    li {
+        display: inline-block;
+        margin: 0;
+        cursor: pointer;
+        text-align: center;
+    }
+}
+.topnav a
+{
+    text-decoration: none;
+}
+.topnav .icon
+{
+    display: none;
+}
+.dropdown .dropbtn
+{
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.dropdown-content
+{
+    display: none;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content li
+{
+    float: none;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown:hover .dropdown-content
+{
+    display: block;
+}
+@include small_resolution
+{
+    .topnav li:not(.active), .dropdown .dropbtn
+    {
+        display: none;
+    }
+    .topnav li.icon
+    {
+        float: right;
+        display: block;
+    }
+
+    .topnav.responsive
+    {
+        position: relative;
+    }
+    .topnav.responsive li.icon
+    {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive li
+    {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .topnav.responsive .dropdown
+    {
+        float: none;
+    }
+    .topnav.responsive .dropdown-content
+    {
+        position: relative;
+    }
+    .topnav.responsive .dropdown .dropbtn
+    {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
+//END
+
+//Classes for coloring all of the navigation elements:
+@each $color, $colorValue in $inputColors
+{
+    .nav-#{$color}
+    {
+        .topnav
+        {
+            background-color: $colorValue;
+        }
+    }
+    .nav-font-#{$color}
+    {
+        .topnav a, .dropdown, .dropbtn
+        {
+            color: $colorValue;
+        }
+    }
+    .nav-hover-#{$color}
+    {
+        .topnav li:hover:not(.active), .dropdown:hover .dropbtn
+        {
+            background-color: lighten($colorValue, 10);
+        }
+    }
+    .nav-font-hover-#{$color}
+    {
+        .topnav li:hover, .dropdown:hover .dropbtn
+        {
+            a, .dropdown, .dropbtn
+            {
+                color: $colorValue;
+            }
+        }
+    }
+    .active-#{$color}
+    {
+        .active
+        {
+            background-color: $colorValue;
+        }
+    }
+    .active-font-#{$color}
+    {
+        .active a
+        {
+            color: $colorValue;
+        }
+    }
+    .dropdown-#{$color}
+    {
+        .dropdown-content
+        {
+            background-color: $colorValue;
+        }
+    }
+    .dropdown-font-#{$color}
+    {
+        .dropdown-content a
+        {
+            color: $colorValue !important;
+        }
+    }
+    .dropdown-hover-#{$color}
+    {
+        .dropdown-content li:hover
+        {
+            background-color: lighten($colorValue, 10) !important;
+        }
+    }
+    .dropdown-font-hover-#{$color}
+    {
+        .dropdown-content li:hover
+        {
+            a
+            {
+                color: $colorValue !important;
+            }
+        }
+    }
+}
+
+//Class for default navigation color
+.nav-default-color
+{
+    .topnav
+    {
+        background-color: $secondary;
+    }
+    .topnav a, .dropdown, .dropbtn, .topnav a:hover, .dropdown:hover .dropbtn
+    {
+        color: $primary;
+    }
+    .topnav li:hover:not(.active), .dropdown:hover .dropbtn
+    {
+        background-color: lighten($secondary, 10);
+    }
+    .active
+    {
+        background-color: $teritary;
+    }
+    .dropdown-content
+    {
+        background-color: $primary;
+    }
+    .dropdown-content a
+    {
+        color: $secondary;
+    }
+    .dropdown-content li:hover
+    {
+        background-color: lighten($secondary, 10) !important;
+        a
+        {
+            color: $primary !important;
+        }
+    }
+}
+
+//Class for nav radius level
+@each $radius, $radiusValue in $buttonRadius
+{
+    .nav-#{$radius}
+    {
+        .topnav
+        {
+            border-radius: $radiusValue;
+        }
+    }
+}
+
+//Class for nav size:
+@each $size, $sizeValues in $navigationSizes
+{
+    .nav-#{$size}
+    {
+        .topnav li
+        {
+            min-width: map-get($sizeValues, "width");
+            padding: map-get($sizeValues, "paddingV") map-get($sizeValues, "paddingH");
+            @include font_sizes2(map-get($sizeValues, "maxFontSize"), map-get($sizeValues, "minFontSize"));
+        }
+        .dropdown
+        {
+            min-width: map-get($sizeValues, "width");
+            padding: map-get($sizeValues, "paddingV") map-get($sizeValues, "paddingH");
+            @include font_sizes2(map-get($sizeValues, "maxFontSize"), map-get($sizeValues, "minFontSize"));
+        }
+        .dropdown-content
+        {
+            min-width: map-get($sizeValues, "widthDropdown");
+            margin-left: -1 * map-get($sizeValues, "paddingH");
+            margin-top: map-get($sizeValues, "paddingV");
+        }
+        @include medium_resolution
+        {
+            .topnav li
+            {
+                min-width: map-get($sizeValues, "widthTablet");
+                padding: map-get($sizeValues, "paddingV") map-get($sizeValues, "paddingH");
+            }
+            .dropdown
+            {
+                min-width: map-get($sizeValues, "widthTablet");
+                padding: map-get($sizeValues, "paddingV") map-get($sizeValues, "paddingH");
+            }
+            .dropdown-content li
+            {
+                padding: map-get($sizeValues, "paddingV") map-get($sizeValues, "paddingH");
+            }
+        }
+        @include small_resolution
+        {
+            .topnav li, .dropdown
+            {
+                min-width: 20px;
+                padding: 14px 16px;
+            }
+            .dropdown-content
+            {
+                margin: 14px -16px -14px -16px;
+            }
+            .dropdown-content li
+            {
+                padding: 12px 16px;
+            }
+        }
+    }
+}
+
+//Classes for fixed and sticky position of navigation bar
+.nav-fixed, .sticky
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+//Classes for logo inside navigation bar
+@each $side in (right, left)
+{
+    .nav-logo-#{$side}
+    {
+        float: #{$side};
+    }
+    @each $size, $sizeValues in $navigationLogoSizes
+    {
+        .nav-logo-#{$side}-#{$size}
+        {
+            float: #{$side};
+            width: map-get($sizeValues, "widthDesktop");
+            margin: map-get($sizeValues, "marginDesktop");
+            font-size: map-get($sizeValues, "widthDesktop") !important;
+            @include medium_resolution
+            {
+                width: map-get($sizeValues, "widthTablet");
+                margin: map-get($sizeValues, "marginTablet");
+                font-size: map-get($sizeValues, "widthTablet") !important;
+            }
+            @include small_resolution
+            {
+                width: map-get($sizeValues, "widthMobile");
+                margin: map-get($sizeValues, "marginMobile");
+                font-size: map-get($sizeValues, "widthMobile") !important;
+            }
+        }
+    }
+}

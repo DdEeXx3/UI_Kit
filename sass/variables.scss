@@ -166,3 +166,24 @@ $inputColors:
 
 //Form placeholder opacity:
 $placeholderOpacity: 0.7;
+
+//Navigation bar sizes:
+$navigationSizes:
+(
+    "the-smallest": ("width": 30px, "widthDropdown": 100px, "widthTablet": 20px, "paddingV": 14px, "paddingH": 12px, "minFontSize": 9, "maxFontSize": 11),
+    "small": ("width": 60px, "widthDropdown": 125px, "widthTablet": 40px, "paddingV": 14px, "paddingH": 16px, "minFontSize": 11, "maxFontSize": 14),
+    "medium-small": ("width": 90px, "widthDropdown": 185px, "widthTablet": 60px, "paddingV": 18px, "paddingH": 20px, "minFontSize": 14, "maxFontSize": 16),
+    "medium": ("width": 120px, "widthDropdown": 240px, "widthTablet": 80px, "paddingV": 22px, "paddingH": 24px, "minFontSize": 16, "maxFontSize": 20),
+    "big": ("width": 150px, "widthDropdown": 295px, "widthTablet": 100px, "paddingV": 26px, "paddingH": 28px, "minFontSize": 20, "maxFontSize": 24),
+    "the-biggest": ("width": 180px, "widthDropdown": 355px, "widthTablet": 120px, "paddingV": 30px, "paddingH": 32px, "minFontSize": 24, "maxFontSize": 28)
+);
+
+$navigationLogoSizes:
+(
+    "the-smallest": ("widthDesktop": 26px, "marginDesktop": 8px, "widthTablet": 24px, "marginTablet": 7.5px, "widthMobile": 24px, "marginMobile": 7.5px),
+    "small": ("widthDesktop": 28px, "marginDesktop": 9px, "widthTablet": 26px, "marginTablet": 8px, "widthMobile": 26px, "marginMobile": 8px),
+    "medium-small": ("widthDesktop": 36px, "marginDesktop": 10px, "widthTablet": 34px, "marginTablet": 10px, "widthMobile": 28px, "marginMobile": 9px),
+    "medium": ("widthDesktop": 44px, "marginDesktop": 13px, "widthTablet": 40px, "marginTablet": 12px, "widthMobile": 30px, "marginMobile": 9px),
+    "big": ("widthDesktop": 51px, "marginDesktop": 16px, "widthTablet": 48px, "marginTablet": 15px, "widthMobile": 32px, "marginMobile": 11px),
+    "the-biggest": ("widthDesktop": 60px, "marginDesktop": 18px, "widthTablet": 57px, "marginTablet": 17px, "widthMobile": 37px, "marginMobile": 11px),
+);
