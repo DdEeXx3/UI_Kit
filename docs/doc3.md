@@ -29,7 +29,7 @@ Third element: "grid-gap" is optional and specifies gap between every div in a g
 To get your work easier we created classes describing position of the element. Every class has its name according to a pattern:
 
 ```scss
-$gridClass = "col_$screenResolution_$columnsNumber";
+$gridClass = "col-$screenResolution-$columnsNumber";
 ```
 
 Where:
@@ -46,18 +46,18 @@ $screenResolution - kind of screen resolution where class is used. This paramete
 For example:
 \
 \
-class "col_sm_4" means that div is 4 of 12 columns width on mobile screens.
+class "col-sm-4" means that div is 4 of 12 columns width on mobile screens.
 
 ![Grid Div](https://i.ibb.co/d5fV3rn/Zrzut-ekranu-2019-07-12-o-15-45-43.png "Grid Divs")
 
 ## How to use them
 
 To understand how our grid classes work, let's start from basic example. We created div with class "container". This container will be our grid. Inside it, we have a div with class "box". We want it to be 6 columns width in desktop screen, 8 columns width in tablet screen and 10 columns width in mobile screen. According to pattern above, we have to give our div 3 classes:
-- "col_lg_6"
-- "col_md_8"
-- "col_sm_10"
-\
-\
+- "col-lg-6"
+- "col-md-8"
+- "col-sm-10"
+<br/>
+
 Apart from this we use class "big" to set font size inside our div to "big". See the code and result of executing it to understand how it works:
 
 ```html
@@ -90,13 +90,20 @@ Apart from this we use class "big" to set font size inside our div to "big". See
     </style>
 <!--END -->
 	<div class="container">
-		<div class="box big col_lg_6 col_md_8 col_sm_10">Content</div>
+		<div class="box big col-lg-6 col-md-8 col-sm-10">Content</div>
     </div>
 </body>
 </html>
 ```
+See effect of executed code:
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="css,result" data-user="ddeexx3" data-slug-hash="VoZzoa" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="GridLayout - example 1">
+  <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/VoZzoa/">
+  GridLayout - example 1</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-[See effect of executed code >](https://www.w3schools.com/code/tryit.asp?filename=G5XEWM7HBT7K)
+<!--[See effect of executed code >](https://www.w3schools.com/code/tryit.asp?filename=G5XEWM7HBT7K)-->
 
 ## Another example
 
@@ -106,12 +113,12 @@ As we remember, our grid has 12 columns, so it's easy to calculate that:
 - in desktop screen our div must be 2 columns width,
 - in tablet screen our div must be 4 columns width,
 - in mobile screen our div must be 6 column width.
-\
-\
+<br/>
+
 So, our divs must contain following classes:
-- "col_lg_2",
-- "col_md_4",
-- "col_sm_6".
+- "col-lg-2",
+- "col-md-4",
+- "col-sm-6".
 
 Let's check the code and see how easy it is!:
 
@@ -145,18 +152,24 @@ Let's check the code and see how easy it is!:
     </style>
 <!--END -->
 	<div class="container">
-		<div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
     </div>
 </body>
 </html>
 ```
-
-[See effect of executed code >](https://www.w3schools.com/code/tryit.asp?filename=G5XFCVHUHN1U)
+See effect of executed code:
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="html,result" data-user="ddeexx3" data-slug-hash="NQKaPY" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="GridLayout - example 2">
+  <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/NQKaPY/">
+  GridLayout - example 2</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<!--[See effect of executed code >](https://www.w3schools.com/code/tryit.asp?filename=G5XFCVHUHN1U)-->
 
 ## Harder example
 
@@ -164,9 +177,9 @@ Let's complicate a little bit our code. Before our six divs we want to add anoth
 
 ```html
 <div class="container">
-    <div class="col_lg_1 col_md_1 col_sm_1"></div>
-    <div class="header col_lg_10 col_md_10 col_sm_10"></div>
-    <div class="col_lg_1 col_md_1 col_sm_1"></div>
+    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+    <div class="header col-lg-10 col-md-10 col-sm-10"></div>
+    <div class="col-lg-1 col-md-1 col-sm-1"></div>
 </div>
 ```
 
@@ -185,11 +198,11 @@ Inside "header" div, as we said before, we want to put 2 "logo" divs and header 
 
 ```html
 <div class="container">
-    <div class="col_lg_1 col_md_1 col_sm_1"></div>
-    <div class="header col_lg_10 col_md_10 col_sm_10">
-        <div class="logo col_lg_1 col_md_2 col_sm_3">LOGO</div>
-        <h2 class="col_lg_10 col_md_8 col_sm_6">HEADER</h2>
-        <div class="logo col_lg_1 col_md_2 col_sm_3">LOGO</div>
+    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+    <div class="header col-lg-10 col-md-10 col-sm-10">
+        <div class="logo col-lg-1 col-md-2 col-sm-3">LOGO</div>
+        <h2 class="col-lg-10 col-md-8 col-sm-6">HEADER</h2>
+        <div class="logo col-lg-1 col-md-2 col-sm-3">LOGO</div>
     </div>
 
     ...
@@ -244,24 +257,32 @@ Final code is like this below. Follow it and see how it works:
     </style>
 <!--END -->
 	<div class="container">
-    	<div class="col_lg_1 col_md_1 col_sm_1"></div>
-    	<div class="header col_lg_10 col_md_10 col_sm_10">
-        	<div class="logo col_lg_1 col_md_2 col_sm_3">LOGO</div>
-        	<h2 class="col_lg_10 col_md_8 col_sm_6">HEADER</h2>
-            <div class="logo col_lg_1 col_md_2 col_sm_3">LOGO</div>
+    	<div class="col-lg-1 col-md-1 col-sm-1"></div>
+    	<div class="header col-lg-10 col-md-10 col-sm-10">
+        	<div class="logo col-lg-1 col-md-2 col-sm-3">LOGO</div>
+        	<h2 class="col-lg-10 col-md-8 col-sm-6">HEADER</h2>
+            <div class="logo col-lg-1 col-md-2 col-sm-3">LOGO</div>
         </div>
-        <div class="col_lg_1 col_md_1 col_sm_1"></div>
-		<div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
+        <div class="col-lg-1 col-md-1 col-sm-1"></div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
     </div>
 </body>
 </html>
 ```
-[See effect of executed code >](https://www.w3schools.com/code/tryit.asp?filename=G5XGCZU2A4XN)
+See effect of executed code:
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="html,result" data-user="ddeexx3" data-slug-hash="MNgEjx" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="GridLayout - example 3">
+  <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/MNgEjx/">
+  GridLayout - example 3</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<!--[See effect of executed code >](https://www.w3schools.com/code/tryit.asp?filename=G5XGCZU2A4XN)-->
 
 ## Important note
 
@@ -300,14 +321,24 @@ Let's return to our example with 6 identic divs. Now, one of them is 7 columns w
     </style>
 <!--END -->
 	<div class="container">
-		<div class="box big col_lg_2 col_md_5 col_sm_7">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
-        <div class="box big col_lg_2 col_md_4 col_sm_6">Content</div>
+		<div class="box big col-lg-2 col-md-5 col-sm-7">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
+		<div class="box big col-lg-2 col-md-4 col-sm-6">Content</div>
     </div>
 </body>
 </html>
 ```
-[See effect of executed code >](https://www.w3schools.com/code/tryit.asp?filename=G5XGLXEGN2DX)
+See effect of executed code:
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="html,result" data-user="ddeexx3" data-slug-hash="LwPzxZ" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="GridLayout - example 4">
+  <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/LwPzxZ/">
+  GridLayout - example 4</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<!--[See effect of executed code >](https://www.w3schools.com/code/tryit.asp?filename=G5XGLXEGN2DX)-->
+<br/>
+
+[See demo page showing grid layout >](/UI_Kit/layoutDemo.html)

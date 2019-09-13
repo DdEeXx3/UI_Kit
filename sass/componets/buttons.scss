@@ -1,0 +1,134 @@
+button
+{
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    &:hover
+    {
+        cursor: pointer;
+    }
+    &:focus
+    {
+        outline: none;
+    }
+}
+//Creating classes for each size of button:
+@each $size, $sizeValues in $buttonSizes
+{
+    .button-#{$size}
+    {
+        padding: map-get($sizeValues, "paddingH") map-get($sizeValues, "paddingV");
+        margin: map-get($sizeValues, "margin") 0;
+        @include font_sizes2(map-get($sizeValues, "maxFontSize"), map-get($sizeValues, "minFontSize"));
+    }
+}
+
+//Creating classes for each radius level of button:
+@each $radiusName, $radiusValue in $buttonRadius
+{
+    .button-#{$radiusName}
+    {
+        border-radius: $radiusValue;
+    }
+}
+
+//Creating classes for each color of button:
+@mixin button-color($color)
+{
+    border-color: $color;
+    color: $primary;
+    background-color: $color;
+    &:focus
+    {
+        border: 1px solid $color;
+        box-shadow: 0 0 10px $color;
+    }
+}
+
+@mixin button-color-shadow($color)
+{
+    -webkit-box-shadow: 0px 0px 7px $color;
+    box-shadow: 0px 0px 7px $color;
+}
+.button-primary
+{
+    @include button-color($primary);
+    border-color: $secondary;
+    color: $secondary;
+    &:focus
+    {
+        border: 1px solid $secondary;
+        box-shadow: 0 0 10px $secondary;
+    }
+}
+.button-secondary
+{
+    @include button-color($secondary);
+}
+.button-teritary
+{
+    @include button-color($teritary);
+}
+.button-success
+{
+    @include button-color($success);
+}
+.button-error
+{
+    @include button-color($error);
+}
+.button-warning
+{
+    @include button-color($warning);
+}
+//KONIEC
+
+//Creating classes for each hover effect of button:
+@each $buttonEffect, $EffectValues in $buttonEffects
+{
+    @if $buttonEffect == "hover-opacity"
+    {
+        .button-#{$buttonEffect}:hover
+        {
+            opacity: map-get($EffectValues, "opacity");
+            transition: map-get($EffectValues, "transition");
+        }
+    }
+    @else
+    {
+        .button-#{$buttonEffect}:hover
+        {
+            -webkit-transform: translate(map-get($EffectValues, "translateX"), map-get($EffectValues, "translateY"));
+            -ms-transform: translate(map-get($EffectValues, "translateX"), map-get($EffectValues, "translateY"));
+            -o-transform: translate(map-get($EffectValues, "translateX"), map-get($EffectValues, "translateY"));
+            transform: translate(map-get($EffectValues, "translateX"), map-get($EffectValues, "translateY"));
+            
+        }
+    }
+}
+
+.button-hover-shadow-primary:hover
+{
+    @include button-color-shadow($primary);
+}
+.button-hover-shadow-secondary:hover
+{
+    @include button-color-shadow($secondary);
+}
+.button-hover-shadow-teritary:hover
+{
+    @include button-color-shadow($teritary);
+}
+.button-hover-shadow-success:hover
+{
+    @include button-color-shadow($success);
+}
+.button-hover-shadow-error:hover
+{
+    @include button-color-shadow($error);
+}
+.button-hover-shadow-warning:hover
+{
+    @include button-color-shadow($warning);
+}

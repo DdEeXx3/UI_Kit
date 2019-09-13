@@ -1,3 +1,13 @@
+//Site colors palette:
+$primary: #F6F4F2;
+$secondary: #425664;
+$teritary: #C6AD8F;
+$success: #3DA557;
+$error: #A83E3E;
+$warning: #E8AA37;
+$link: #0070c9;
+$link_hover: #005faa;
+
 //Breakpoint resolutions of screen
 $resolutions:
 (
@@ -52,3 +62,31 @@ $contentPadding: 20px;
 //Number of max columns amount and gap between them:
 $columnsAmount: 12;
 $gridGap: 10px;
+
+//Button sizes:
+$buttonSizes:
+(
+    "small": ("paddingH": 5px, "paddingV": 12px, "margin": 5px, "minFontSize": 9, "maxFontSize": 11),
+    "medium": ("paddingH": 10px, "paddingV": 25px, "margin": 10px, "minFontSize": 11, "maxFontSize": 16),
+    "big": ("paddingH": 20px, "paddingV": 50px, "margin": 20px, "minFontSize": 16, "maxFontSize": 24)
+);
+
+//Button radius:
+$buttonRadius:
+(
+    "no-radius": 0,
+    "small-radius": 0.5em,
+    "medium-radius": 1em,
+    "big-radius": 2em,
+    "oval": 50%
+);
+
+//Button effects:
+$buttonEffects:
+(
+    "hover-opacity": ("opacity": 0.8, "transition": 0.8s),
+    "hover-down": ("translateX": 0px, "translateY": 10px),
+    "hover-up": ("translateX": 0px, "translateY": -10px),
+    "hover-left": ("translateX": -10px, "translateY": 0px),
+    "hover-right": ("translateX": 10px, "translateY": 0px)
+);
