@@ -90,3 +90,38 @@ $buttonEffects:
     "hover-left": ("translateX": -10px, "translateY": 0px),
     "hover-right": ("translateX": 10px, "translateY": 0px)
 );
+
+//Table layout:
+$tableLayout: ("auto": auto, "fixed": fixed);
+
+//Table align:
+$tableAlign: 
+(
+    "right": ("margin-left": auto, "margin-right": 0),
+    "left": ("margin-left": 0, "margin-right": auto),
+    "center": ("margin-left": auto, "margin-right": auto)
+);
+
+//Table-border:
+$tableBorders: (solid, dotted, dashed, double);
+
+//Table color saturation
+$colorSaturations: (lighten, darken);
+
+//Table elements default color:
+$tableElementsColor: 
+(
+    "caption": $secondary, 
+    "th": $teritary,
+    "tr1": $primary,
+    "tr2": $primary,
+);
+
+//Table paddings:
+$tablePaddings:
+(
+    "no-padding": ("caption": 0, "header": 0, "cell": 0),
+    "small-padding": ("caption": 15px, "header": 10px, "cell": 5px),
+    "medium-padding": ("caption": 30px, "header": 20px, "cell": 10px),
+    "big-padding": ("caption": 45px, "header": 30px, "cell": 15px)
+);
