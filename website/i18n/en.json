@@ -9,7 +9,7 @@
         "title": "What is that?"
       },
       "dictionary2": {
-        "title": "Font Size"
+        "title": "Typography"
       },
       "dictionary3": {
         "title": "Grid Layout"
@@ -28,7 +28,7 @@
         "sidebar_label": "Installation"
       },
       "doc2": {
-        "title": "Font Size"
+        "title": "Typography"
       },
       "doc3": {
         "title": "Grid Layout"
@@ -47,6 +47,7 @@
       "Getting Started": "Getting Started",
       "Classes Dictionary": "Classes Dictionary",
       "Demo Page": "Demo Page",
+      "Real Example": "Real Example",
       "Blog": "Blog",
       "GitHub": "GitHub"
     },

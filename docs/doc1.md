@@ -12,7 +12,7 @@ After that, you can use our tool immediately.
 ```html
 <body>
 ...
-<link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/ui_kit.css">
+<link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/css/ui_kit.css">
 ...
 </body>
 ```

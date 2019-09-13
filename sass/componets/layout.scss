@@ -36,6 +36,64 @@ body
             }
         }   
     }
+    // .col-#{$key}-0
+    // {
+    //     display: none;
+    // }
+}
+
+//Creating function for elements width, height, padding and margin:
+@each $element in $layoutElements
+{
+    .#{$element}-auto
+    {
+        #{$element}: auto;
+    }
+    @for $i from 1 through 1000
+    {
+        .#{$element}-#{$i}px
+        {
+            #{$element}: #{$i}px;
+        }   
+    }
+    @if $element == "margin" or $element == "padding"
+    {
+        @each $direction in $elementsDirections
+        {
+            .#{$element}-#{$direction}-auto
+            {
+                #{$element}-#{$direction}: auto;
+            }
+            @for $i from 1 through 1000
+            {
+                .#{$element}-#{$direction}-#{$i}px
+                {
+                    #{$element}-#{$direction}: #{$i}px;
+                }
+            }
+        }
+    }
+}
+
+@for $i from 1 through 100
+{
+    @each $element in $layoutElements
+    {
+        .#{$element}-#{$i}percent
+        {
+            #{$element}: #{$i}#{"%"};
+        }
+        @if $element == "margin" or $element == "padding"
+        {
+            @each $direction in $elementsDirections
+            {
+                .#{$element}-#{$direction}-#{$i}percent
+                {
+                    #{$element}-#{$direction}: #{$i}#{"%"};
+                }
+            }
+        }
+    }
 }
 
 //Styling demo page:

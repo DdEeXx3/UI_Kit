@@ -98,21 +98,24 @@ hr
     border-bottom: 5px #fff solid;
 }
 
-a
+@each $color, $colorValue in $inputColors
 {
-    color: $link;
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    cursor: pointer;
-    transition: all 0.4s linear;
-    -webkit-transition: all 0.4s linear;
-    -moz-transition: all 0.4s linear;
+    .a-#{$color}
+    {
+        color: $colorValue;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        cursor: pointer;
+        transition: all 0.4s linear;
+        -webkit-transition: all 0.4s linear;
+        -moz-transition: all 0.4s linear;
 
     &:hover
-    {
-        color: $link_hover;
-        text-decoration: underline;
-        opacity: 0.85;
+        {
+            color: darken($colorValue, 8);
+            text-decoration: underline;
+            opacity: 0.85;
+        }
     }
 }
 

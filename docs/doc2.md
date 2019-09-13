@@ -1,6 +1,6 @@
 ---
 id: doc2
-title: Font Size
+title: Typography
 ---
 
 ## Introduction
@@ -38,7 +38,7 @@ In the example below we created 6 paragraphs and named them by different classes
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/ui_kit.css">
+    <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/css/ui_kit.css">
 </head>
 <body>
     <style>
@@ -76,7 +76,7 @@ When it comes to headers, we have 6 ones: h1 - h6, excatly the same ammount as n
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/ui_kit.css">
+    <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/css/ui_kit.css">
 </head>
 <body>
     <style>
@@ -117,7 +117,7 @@ Of course you can also change the size of any in-site element, for example links
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/ui_kit.css">
+    <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/css/ui_kit.css">
 </head>
 <body>
     <style>
@@ -125,7 +125,7 @@ Of course you can also change the size of any in-site element, for example links
             padding: 30px;
         }
     </style>
-    <a class="the-biggest" href="#">This is the biggest link</a>
+    <a class="a-link the-biggest" href="#">This is the biggest link</a>
     <br/><br/>
     <span class="big">This is big span</span>
     <br/><br/>
@@ -149,5 +149,108 @@ See effect of executed code:
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 <!--[See effect of executed code >](https://www.w3schools.com/code/tryit.asp?filename=G5XBFPN8L2HI)-->
 <br/>
+
+## Links
+
+As you could spot, we used one more class to "a" HTML element - "a-link". This group of classes is responsible for coloring links on your page. This class looks like:
+```sass
+.a-$color
+```
+
+Where:
+<br>
+
+$color - color, which you can set to your link. This parameter gets 7 parameters:
+- link - default color of links,
+- primary - first main color of your page, should be light,
+- secondary - second main color of your page, should be dark,
+- teritary - third main color of your page, it may be any color,
+- success - color responsible for successes and any positive actions on your site,
+- error - color responsible for errors and any negative actions on your site,
+- warning - color resposible for displaying any warning on your site.
+
+In example below, we changed background color to have primary color input visible:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/css/ui_kit.css">
+</head>
+<body>
+    <style>
+        body
+        {
+            background-color: #b3e6e4;
+        }
+    </style>
+    <a class="a-link the-biggest" href="#">This is default color link</a>
+    <br>
+    <a class="a-primary the-biggest" href="#">This is primary color link</a>
+    <br>
+    <a class="a-secondary the-biggest" href="#">This is secondary color link</a>
+    <br>
+    <a class="a-teritary the-biggest" href="#">This is teritary color link</a>
+    <br>
+    <a class="a-success the-biggest" href="#">This is success color link</a>
+    <br>
+    <a class="a-error the-biggest" href="#">This is error color link</a>
+    <br>
+    <a class="a-warning the-biggest" href="#">This is warning color link</a>
+
+</body>
+</html>
+```
+See result of executed code:
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="result" data-user="ddeexx3" data-slug-hash="JgWpbQ" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FontSize - example 4">
+  <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/JgWpbQ/">
+  FontSize - example 4</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+## Other elements' colors
+
+If you want to change color of any other element you can use form input classes. You have to use class below:
+```sass
+.input-font-$color
+```
+<br>
+To read more about it, [go to forms section.](doc6#colors)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/css/ui_kit.css">
+</head>
+<body>
+    <p class="medium input-font-teritary">This is medium, teritary color paragraph.</p>
+    <span class="big input-font-error">This is big, error color span</span>
+    <h3 class="input-font-link">This is h3 with link color</h3>
+    <div class="medium-small input-font-warning">
+        This is medium-small, warning color text inside a div
+        <p>And paragraph also inside this div</p>
+        </div>
+</body>
+</html>
+```
+See result of executed code:
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="result" data-user="ddeexx3" data-slug-hash="PMpxBy" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FontSize - example 5">
+  <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/PMpxBy/">
+  FontSize - example 5</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<br>
 
 [See demo page showing font-sizes >](/UI_Kit/typographyDemo.html)

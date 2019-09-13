@@ -36,7 +36,7 @@ Check more examples to see how it's work:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/ui_kit.css">
+    <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/css/ui_kit.css">
 </head>
 <body>
     <form>
@@ -89,7 +89,7 @@ To get more information about it, see [Buttons section](doc4#radius-level).
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/ui_kit.css">
+    <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/css/ui_kit.css">
 </head>
 <body>
     <form>
@@ -134,7 +134,7 @@ We changed background color for this example to have primary color input visible
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/ui_kit.css">
+    <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/css/ui_kit.css">
 </head>
 <body>
     <form>
@@ -184,7 +184,7 @@ Last group of classes is responsible for changing default colors of input elemen
 ```
 Where:
 - $element - any input's element you want to have color changed. This parameter may get 3 values: __font__, __placeholder__ and __background__.
-- $color - a color on which you want to change your element. You can set value: __primary__, __secondary__, __teritary__, __success__, __error__ and __warning__.
+- $color - a color on which you want to change your element. You can set value: __primary__, __secondary__, __teritary__, __success__, __error__, __warning__ and __link__.
 
 ```html
 <!DOCTYPE html>
@@ -194,7 +194,7 @@ Where:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/ui_kit.css">
+    <link rel="stylesheet" type="text/css" href="https://ddeexx3.github.io/UI_Kit/css/ui_kit.css">
 </head>
 <body>
     <form>

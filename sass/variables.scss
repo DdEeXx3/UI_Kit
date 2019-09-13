@@ -6,7 +6,14 @@ $success: #3DA557;
 $error: #A83E3E;
 $warning: #E8AA37;
 $link: #0070c9;
-$link_hover: #005faa;
+
+// $primary: #f2f2f2;
+// $secondary: rgba(45,45,45,0.98);
+// $teritary: white;
+// $success: #3DA557;
+// $error: #A83E3E;
+// $warning: #E8AA37;
+// $link: #0070c9;
 
 //Breakpoint resolutions of screen
 $resolutions:
@@ -58,6 +65,10 @@ $headerPaddingLeft: 15px;
 $headerMarginBottom: 15px;
 $paragraphMarginBottom: 1em;
 $contentPadding: 20px;
+
+//Layout
+$layoutElements: ("width", "height", "margin", "padding");
+$elementsDirections: ("top", "bottom", "right", "left");
 
 //Number of max columns amount and gap between them:
 $columnsAmount: 12;
@@ -149,7 +160,8 @@ $inputColors:
     "teritary": $teritary, 
     "success": $success, 
     "error": $error, 
-    "warning": $warning
+    "warning": $warning,
+    "link": $link
 );
 
 //Form placeholder opacity:

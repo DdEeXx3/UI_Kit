@@ -14,7 +14,7 @@ const users = [
     caption: 'User1',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/image.jpg'.
-    image: '/img/undraw_open_source.svg',
+    image: './img/undraw_open_source.svg',
     infoLink: 'https://www.facebook.com',
     pinned: true,
   },
@@ -42,6 +42,7 @@ const siteConfig = {
     {doc: 'dictionary1', label: 'Classes Dictionary'},
     //{doc: 'doc4', label: 'API'},
     {page: 'demo.html', label: 'Demo Page'},
+    {page: 'demoChair.html', label: 'Real Example'},
     //{page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
     {href: "https://github.com/DdEeXx3/UI_Kit", label: "GitHub"}
@@ -104,7 +105,7 @@ const siteConfig = {
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
   //   repoUrl: 'https://github.com/facebook/test-site',
-  separateCss: ['ui_kit.css']
+  separateCss: ['ui_kit.css', 'demoChair.css']
 };
 
 module.exports = siteConfig;
