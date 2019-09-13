@@ -56,7 +56,7 @@ In the example below we created 6 paragraphs and named them by different classes
 </html>
 ```
 See effect of executed code:
-<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="html,result" data-user="ddeexx3" data-slug-hash="aeoyZR" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FontSize - example 1">
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="result" data-user="ddeexx3" data-slug-hash="aeoyZR" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FontSize - example 1">
   <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/aeoyZR/">
   FontSize - example 1</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -97,7 +97,7 @@ When it comes to headers, we have 6 ones: h1 - h6, excatly the same ammount as n
 </html>
 ```
 See effect of executed code:
-<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="html,result" data-user="ddeexx3" data-slug-hash="qeWXxz" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FontSize - example 2">
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="result" data-user="ddeexx3" data-slug-hash="qeWXxz" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FontSize - example 2">
   <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/qeWXxz/">
   FontSize - example 2</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -141,7 +141,7 @@ Of course you can also change the size of any in-site element, for example links
 </html>
 ```
 See effect of executed code:
-<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="html,result" data-user="ddeexx3" data-slug-hash="XvraBo" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FontSize - example 3">
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="result" data-user="ddeexx3" data-slug-hash="XvraBo" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FontSize - example 3">
   <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/XvraBo/">
   FontSize - example 3</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>

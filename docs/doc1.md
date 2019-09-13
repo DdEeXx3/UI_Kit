@@ -1,7 +1,7 @@
 ---
 id: doc1
 title: Setting Up
-sidebar_label: Introduction
+sidebar_label: Installation
 ---
 
 ## Installation

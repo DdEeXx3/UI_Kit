@@ -1,10 +1,10 @@
 {
   "docs": {
     "Setting Up": ["doc1"],
-    "How to use": ["doc2", "doc3", "doc4", "doc5"]
+    "How to use": ["doc2", "doc3", "doc4", "doc5", "doc6"]
   },
   "docs-other": {
     "What is that?": ["dictionary1"],
-    "Styling page elements": ["dictionary2", "dictionary3", "dictionary4", "dictionary5"]
+    "Styling page elements": ["dictionary2", "dictionary3", "dictionary4", "dictionary5", "dictionary6"]
   }
 }

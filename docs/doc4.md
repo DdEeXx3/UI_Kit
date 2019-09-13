@@ -44,7 +44,7 @@ Find differences between this three classes (there is another class - "button-pr
 </html>
 ```
 See effect of executed code:
-<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="html,result" data-user="ddeexx3" data-slug-hash="mNbXJW" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Buttons - example 1">
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="result" data-user="ddeexx3" data-slug-hash="mNbXJW" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Buttons - example 1">
   <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/mNbXJW/">
   Buttons - example 1</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -86,7 +86,7 @@ There is an example:
 ```
 
 See effect of executed code:
-<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="html,result" data-user="ddeexx3" data-slug-hash="oKvEQw" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Buttons - example 2">
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="result" data-user="ddeexx3" data-slug-hash="oKvEQw" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Buttons - example 2">
   <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/oKvEQw/">
   Buttons - example 2</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -127,7 +127,7 @@ Next thing is color of the button. We created by default 6 classes with colors u
 </html>
 ```
 See effect of executed code:
-<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="html,result" data-user="ddeexx3" data-slug-hash="YmKaza" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Buttons - example 3">
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="result" data-user="ddeexx3" data-slug-hash="YmKaza" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Buttons - example 3">
   <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/YmKaza/">
   Buttons - example 3</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -174,7 +174,7 @@ As you can see, there is posibillity to chose any of shadow color of the button 
 </html>
 ```
 See effect of executed code:
-<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="html,result" data-user="ddeexx3" data-slug-hash="gVYeLZ" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Buttons - example 4">
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="result" data-user="ddeexx3" data-slug-hash="gVYeLZ" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Buttons - example 4">
   <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/gVYeLZ/">
   Buttons - example 4</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -213,7 +213,7 @@ You can also define your own font size in every button using font-size classes f
 </html>
 ```
 See effect of executed code:
-<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="html,result" data-user="ddeexx3" data-slug-hash="wVwmEB" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Buttons - example 5">
+<p class="codepen" data-height="320" data-theme-id="0" data-default-tab="result" data-user="ddeexx3" data-slug-hash="wVwmEB" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Buttons - example 5">
   <span>See the Pen <a href="https://codepen.io/ddeexx3/pen/wVwmEB/">
   Buttons - example 5</a> by Bartosz Grabarczyk (<a href="https://codepen.io/ddeexx3">@ddeexx3</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -222,6 +222,12 @@ See effect of executed code:
 <br>
 
 Of course you are allowed to edit buttons on your own (for example changing their height and width) to make them more personalised.
+<br>
+
+Important note!
+<br>
+
+If you want to use our class to other buttons, for example __submit__ in form, you have to add additional class __"button"__ to it. HTML "button" type has some properties added by default, for other buttons you have to add it by using class __"button"__
 <br>
 
 [See demo page showing button styles >](/UI_Kit/buttonsDemo.html)

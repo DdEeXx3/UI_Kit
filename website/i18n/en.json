@@ -20,9 +20,12 @@
       "dictionary5": {
         "title": "Tables"
       },
+      "dictionary6": {
+        "title": "Forms"
+      },
       "doc1": {
         "title": "Setting Up",
-        "sidebar_label": "Introduction"
+        "sidebar_label": "Installation"
       },
       "doc2": {
         "title": "Font Size"
@@ -35,6 +38,9 @@
       },
       "doc5": {
         "title": "Tables"
+      },
+      "doc6": {
+        "title": "Forms"
       }
     },
     "links": {
